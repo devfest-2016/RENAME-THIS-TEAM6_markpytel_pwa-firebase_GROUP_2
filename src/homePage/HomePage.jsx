@@ -17,6 +17,7 @@ const HomePage = React.createClass({
 
 signIn(role) {
   var provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/calendar');
   var database = firebase.database();
 
   firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -27,7 +28,9 @@ signIn(role) {
     database.ref('userRoles/' + userId).set({
       role: role
     });
-    browserHistory.push('dashboard');
+    if (role === 'tutor') {
+      browserHistory.push('teacher/dashboard');
+    } else { browserHistory.push('student/dashboard') }
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -44,7 +47,6 @@ signIn(role) {
         <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
       </div>
     )
-    
   }
 })
 

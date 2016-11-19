@@ -1,7 +1,5 @@
 import React from 'react';
-import NavBar from './NavBar';
-import TeacherDash from './dashboard/TeacherDash'
-import './App.css';
+import NavBar from './parts/NavBar';
 
 const App = (props) => (
   <div>
