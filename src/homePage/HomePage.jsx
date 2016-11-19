@@ -28,7 +28,9 @@ signIn(role) {
     database.ref('userRoles/' + userId).set({
       role: role
     });
-    browserHistory.push('dashboard');
+    if (role === 'tutor') {
+      browserHistory.push('teacher/dashboard');
+    } else { browserHistory.push('student/dashboard') }
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
