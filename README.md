@@ -1,23 +1,12 @@
-# describe your team, project, and goals here
+# Team Success
 
-- Size of team (2-5)
-- Mandatory use of Firebase. Bonus using Android or Progressive Web App.
-- Must include a business model
-- No code may be written before Saturday Nov 19; Github repos will be provided on Saturday
+Team Success is 5 people: Jack Huang, Sachin Verma, Samantha Bretons, BJ Cantaloupe, and Eric Tillberg.
 
-# Schedule
-<!---
-- [schedule] (https://docs.google.com/spreadsheets/d/1ObVweavGyCD0uSd9dS_t2vKsTwBAIjPOSWiVCclh78Y/edit?usp=sharing)
--->
-- [Calendar link: Hackathon] (https://calendar.google.com/calendar/embed?src=OXM4a2FjMjVvNTNzZGplZm9vMmY4cTVrdGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
-- [Calendar link: Talks] (https://calendar.google.com/calendar/embed?src=OTc3YzBxN2t1ZnFham82NDNvN25oZ21xcjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
-
-# Monitoring
-- We will use firebase to monitor the firebase/devfest hackathon :)  See [https://github-hackathon.firebaseapp.com/] (https://github-hackathon.firebaseapp.com/)
-- [source] (https://github.com/devfest-2016/Firebase-Monitor)
-
-# Presentations and examples
-- [pitch template updated for our Hackathon] (http://bit.ly/dfnyc16-hackathon-pitch)
-- [example from previous years] (https://docs.google.com/presentation/d/1z0dE1G-Bb4XNmPakD7U3wkpiPoZTI01Y7KPSP6sXWFA/edit?usp=sharing)
+Our app uses React and Firebase, and will tap into the Google Calendar API. The app is a scheduling app for tutors and students. Each user enters their free time into a calendar and, when both calendars are ready, the app will merge the two calendars and find a time for a lesson. The app will then propose the lesson time to each party for confirmation. Upon confirmation, the lesson will be entered into each party’s Google calendar.
 
 
+* There are many opportunities to add value to this idea for an MVP, including:
+  * pushing messages to tutors and students if and when one party might be late for a lesson
+  * alerting a party in case of cancellation
+  * giving live updates as to how far the tutor is from the meeting place (again, for the concern of being late)
+  * giving a summary to each party of hours in lessons and money spent/earned
