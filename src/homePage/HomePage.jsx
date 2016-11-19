@@ -37,15 +37,13 @@ signIn(role) {
 },
 
   render(){
-    if (firebase.auth().currentUser) {
-      return (
+    return (
       <div>
         <h1 id="title">Teacherly</h1>
         <Link to="#" className="login" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
         <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
       </div>
-      )
-    }
+    )
   }
 })
 
