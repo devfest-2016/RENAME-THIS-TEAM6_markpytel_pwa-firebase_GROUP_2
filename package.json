@@ -11,15 +11,10 @@
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-redux": "^4.4.6",
-<<<<<<< HEAD
-    "react-router": "^3.0.0",
     "react-thunk": "^1.0.0",
-    "reactfire": "^1.0.0",
-    "redux-thunk": "^2.1.0"
-=======
+    "redux-thunk": "^2.1.0",
     "reactfire": "^1.0.0",
     "react-router": "^3.0.0"
->>>>>>> 614145ff4c042adc330d36fbc01e48eab69275a9
   },
   "scripts": {
     "start": "react-scripts start",
