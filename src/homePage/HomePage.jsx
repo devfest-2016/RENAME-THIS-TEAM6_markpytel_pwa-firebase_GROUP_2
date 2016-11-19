@@ -17,6 +17,7 @@ const HomePage = React.createClass({
 
 signIn(role) {
   var provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/calendar');
   var database = firebase.database();
 
   firebase.auth().signInWithPopup(provider).then(function(result) {
