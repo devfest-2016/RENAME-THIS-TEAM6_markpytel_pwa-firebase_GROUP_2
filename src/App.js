@@ -17,12 +17,17 @@ const App = React.createClass({
     firebase.initializeApp(config);
   }
 
-  signIn() {
+  signIn(role) {
     var provider = new firebase.auth.GoogleAuthProvider();
+    var database = firebase.database();
+
     firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
       var user = result.user;
-
+      var userId = user.uid;
+      database.ref('userRoles/' + userId).set({
+        role: role
+      });
     }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -34,7 +39,8 @@ const App = React.createClass({
   render() {
     return (
       <div>
-        <a href="#" onClick={() => {this.signIn()}}>Sign in here!</a>
+        <a href="#" onClick={() => {this.signIn('tutor')}}>Tutor Login</a>
+        <a href="#" onClick={() => {this.signIn('student')}}>Student Login</a>
         {this.props.children}
       </div>
     );
