@@ -7,7 +7,7 @@ const NavBar = React.createClass({
         <span className="logo"><a href="#">Logo</a></span>
         <ul>
           <li><a href="#">ITEM 1</a></li>
-          <li><a href="#">ITEM 2</a></li>
+          <li className="hide"><a className="hide" href="#">Logout</a></li>
         </ul>
       </header>
     )

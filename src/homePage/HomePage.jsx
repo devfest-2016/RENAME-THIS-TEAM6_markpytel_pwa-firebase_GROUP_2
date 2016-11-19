@@ -1,17 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router'
+import { browserHistory, Link} from 'react-router'
 import firebase from 'firebase';
 
 const HomePage = React.createClass({
-
-componentDidMount() {
+  componentDidMount() {
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyD5LG0tGT5ViExMwYkyDiRjvFqv1dIMnWI",
-    authDomain: "team-success.firebaseapp.com",
-    databaseURL: "https://team-success.firebaseio.com",
-    storageBucket: "",
-    messagingSenderId: "702172172434"
+    apiKey: "AIzaSyBM7YY691iJDj1xsoLBAGlw3nxSO2wmnII",
+    authDomain: "team-success-9ce1b.firebaseapp.com",
+    databaseURL: "https://team-success-9ce1b.firebaseio.com",
+    storageBucket: "team-success-9ce1b.appspot.com",
+    messagingSenderId: "35508077639"
   };
   firebase.initializeApp(config);
 },
@@ -24,9 +23,11 @@ signIn(role) {
     var token = result.credential.accessToken;
     var user = result.user;
     var userId = user.uid;
+
     database.ref('userRoles/' + userId).set({
       role: role
     });
+    browserHistory.push('dashboard');
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -38,11 +39,12 @@ signIn(role) {
   render(){
     return (
       <div>
-      <h1>HomePage</h1>
-      <Link to="/dashboard" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
-      <Link to="#" onClick={() => {this.signIn('student')}}>Student Login</Link>
+        <h1 id="title">Teacherly</h1>
+        <Link to="/dashboard" className="login" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
+        <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
       </div>
     )
+    
   }
 })
 

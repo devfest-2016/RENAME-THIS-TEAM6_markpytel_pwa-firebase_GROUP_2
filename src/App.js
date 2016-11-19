@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-import firebase from 'firebase';
+import TeacherDash from './dashboard/TeacherDash'
 import './App.css';
 
 const App = (props) => (
@@ -9,5 +9,6 @@ const App = (props) => (
     {props.children}
   </div>
 );
+
 
 export default App;

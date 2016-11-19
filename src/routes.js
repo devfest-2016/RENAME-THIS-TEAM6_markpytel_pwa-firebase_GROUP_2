@@ -15,6 +15,7 @@ export default (
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
     </Route>
-    <Route path="dashboard" component={DashboardContainer} onEnter={getTutorData}/>
   </Router>
 )
+
+//<Route path="dashboard" component={DashboardContainer} onEnter={getTutorData}/>
