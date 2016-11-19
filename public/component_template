@@ -6,6 +6,6 @@ const HomePage = React.createClass({
       <div>HomePage</div>
     )
   }
-}
+})
 
 export default HomePage
