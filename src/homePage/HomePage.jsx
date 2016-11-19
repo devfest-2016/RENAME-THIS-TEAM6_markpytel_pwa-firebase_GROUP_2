@@ -39,7 +39,7 @@ signIn(role) {
     return (
       <div>
       <h1>HomePage</h1>
-      <Link to="#" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
+      <Link to="/dashboard" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
       <Link to="#" onClick={() => {this.signIn('student')}}>Student Login</Link>
       </div>
     )
