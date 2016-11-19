@@ -6,13 +6,6 @@ import './App.css';
 
 const App = React.createClass({
 
-<<<<<<< HEAD
-  render() {
-    return (
-      <div className="App">
-        <NavBar />
-        {this.props.children}
-=======
   componentDidMount() {
     // Initialize Firebase
     var config = {
@@ -50,7 +43,6 @@ const App = React.createClass({
         {this.props.children}
         <a href="#" onClick={() => {this.signIn('tutor')}}>Tutor Login</a>
         <a href="#" onClick={() => {this.signIn('student')}}>Student Login</a>
->>>>>>> origin/master
       </div>
     );
   }
