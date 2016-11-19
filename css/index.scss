@@ -1,0 +1,51 @@
+
+//  Item background Colors:
+  $purple: rgb(78, 72, 149);
+  $orange: rgb(255, 91, 1);
+  $teal: rgb(42, 111, 136);
+  $gray: rgb(184, 186, 203);
+  $white: rgb(255, 255, 255);
+
+  $black-border: 1px solid black;
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  transition: 0.5s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  border-bottom: 1px solid black;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+//  border: $black-border;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-right: 10px;
+  text-align: center;
+//  border: $black-border;
+}
+
+.container {
+  display: flex;
+}
+
+.logo {
+  border: $black-border;
+  text-align: center;
+}
