@@ -3,15 +3,14 @@ import {Link} from 'react-router'
 import firebase from 'firebase';
 
 const HomePage = React.createClass({
-
-componentDidMount() {
+  componentDidMount() {
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyD5LG0tGT5ViExMwYkyDiRjvFqv1dIMnWI",
-    authDomain: "team-success.firebaseapp.com",
-    databaseURL: "https://team-success.firebaseio.com",
-    storageBucket: "",
-    messagingSenderId: "702172172434"
+    apiKey: "AIzaSyBM7YY691iJDj1xsoLBAGlw3nxSO2wmnII",
+    authDomain: "team-success-9ce1b.firebaseapp.com",
+    databaseURL: "https://team-success-9ce1b.firebaseio.com",
+    storageBucket: "team-success-9ce1b.appspot.com",
+    messagingSenderId: "35508077639"
   };
   firebase.initializeApp(config);
 },
