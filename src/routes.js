@@ -1,10 +1,14 @@
 import React from 'react'
-import { Route, IndexRoute } from 'react-router';
+import { Route, IndexRoute, browserHistory, Router } from 'react-router';
 import App from './App';
+import Dashboard from './dashboard/Dashboard';
 import HomePage from './homePage/HomePage'
 
 export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={HomePage}/>
-  </Route>
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={HomePage}/>
+    </Route>
+    <Route path="dashboard" component={Dashboard}/>
+  </Router>
 )

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import logo from './logo.svg';
 import './App.css';
 
 const App = React.createClass({
@@ -15,7 +14,7 @@ const App = React.createClass({
       messagingSenderId: "702172172434"
     };
     firebase.initializeApp(config);
-  }
+  },
 
   signIn(role) {
     var provider = new firebase.auth.GoogleAuthProvider();
@@ -34,14 +33,14 @@ const App = React.createClass({
       var email = error.email;
       var credential = error.credential;
     });
-  }
+  },
 
   render() {
     return (
       <div>
+        {this.props.children}
         <a href="#" onClick={() => {this.signIn('tutor')}}>Tutor Login</a>
         <a href="#" onClick={() => {this.signIn('student')}}>Student Login</a>
-        {this.props.children}
       </div>
     );
   }
