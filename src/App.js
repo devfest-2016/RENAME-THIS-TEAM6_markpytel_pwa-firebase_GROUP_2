@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import NavBar from './NavBar';
+import TeacherDash from './dashboard/TeacherDash'
 import firebase from 'firebase';
 import './App.css';
 
@@ -40,9 +41,8 @@ const App = React.createClass({
   render() {
     return (
       <div>
-        {this.props.children}
-        <a href="#" onClick={() => {this.signIn('tutor')}}>Tutor Login</a>
-        <a href="#" onClick={() => {this.signIn('student')}}>Student Login</a>
+        <NavBar />
+      {this.props.children}
       </div>
     );
   }

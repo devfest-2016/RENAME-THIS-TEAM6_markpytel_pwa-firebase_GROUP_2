@@ -38,9 +38,9 @@ signIn(role) {
   render(){
     return (
       <div>
-      <h1>HomePage</h1>
-      <Link to="#" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
-      <Link to="#" onClick={() => {this.signIn('student')}}>Student Login</Link>
+      <h1 id="title">Teacherly</h1>
+      <Link to="#" className="login" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
+      <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
       </div>
     )
   }
