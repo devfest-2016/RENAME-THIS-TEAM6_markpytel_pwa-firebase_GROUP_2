@@ -58,9 +58,9 @@ const Calendar = React.createClass({
         }]
       )
     })
-    database.ref('users/user5').push({
-        schedule: available
-      });
+    database.ref('users/' ).push({
+      schedule: available
+    });
   },
 
   render() {
