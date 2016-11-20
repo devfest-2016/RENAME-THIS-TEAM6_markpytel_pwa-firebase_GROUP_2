@@ -11,6 +11,13 @@ body {
   text-align: center;
   background-color: #fefefe; }
 
+.calendar-container {
+  border: 1px solid black;
+  margin: 0 20px;
+  width: 700px;
+  height: 500px;
+  display: inline-flex; }
+
 .login {
   font-size: 2em;
   padding: 20px 10px;
@@ -32,7 +39,8 @@ body {
 
 .navbar ul {
   list-style-type: none;
-  display: inline-block; }
+  display: inline-flex;
+  flex-flow: wrap; }
 
 .navbar li {
   display: inline-block;
@@ -42,10 +50,19 @@ body {
   text-align: center;
   background: #b8bacb;
   border-radius: 10px;
-  border-bottom: 4px solid #f3f3f6;
-  display: inline-block; }
+  border-bottom: 4px solid #f3f3f6; }
   .navbar li:active {
     border-bottom: none; }
+
+.upcoming-lesson-list {
+  list-style-type: none;
+  margin-top: 0px; }
+
+li.lesson:not(first-of-type),
+li.student:not(first-of-type) {
+  border: 1px solid black;
+  width: 250px;
+  padding: 15px 30px; }
 
 .container {
   display: flex; }

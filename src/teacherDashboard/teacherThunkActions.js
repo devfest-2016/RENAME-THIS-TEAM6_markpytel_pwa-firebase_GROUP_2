@@ -1,14 +1,5 @@
-import firebase from 'firebase'
-import {initFirebase} from '../firebase'
-
-// var config = {
-//   apiKey: "AIzaSyBM7YY691iJDj1xsoLBAGlw3nxSO2wmnII",
-//   authDomain: "team-success-9ce1b.firebaseapp.com",
-//   databaseURL: "https://team-success-9ce1b.firebaseio.com",
-//   storageBucket: "team-success-9ce1b.appspot.com",
-//   messagingSenderId: "35508077639"
-// };
-// firebase.initializeApp(config);
+import * as firebase from 'firebase'
+import $ from 'jquery'
 
 export const getTutor = tutor => ({
   type: 'ADD_TEACHER',
@@ -18,11 +9,17 @@ export const getTutor = tutor => ({
 //get All blog post and send to store
 export const getTutorDataAsync = () => (dispatch) => {
   console.log("async")
-  initFirebase()
-  const rootRef = firebase.database().ref().child('react')
-  const speedRef = rootRef.child('speed')
-  speedRef.on('value', snap => {
-    console.log(snap.val())
-    dispatch(getTutor(snap.val()))
+  $.ajax({
+    url: "https://team-success.firebaseio.com/react.json"
   })
+  .done(data => {
+    console.log(data)
+  })
+  // const rootRef = firebase.database().ref().child('react')
+  // console.log(rootRef)
+  // const speedRef = rootRef.child('speed')
+  // speedRef.on('value', snap => {
+  //   console.log(snap.val())
+  //   dispatch(getTutor(snap.val()))
+  // })
 }

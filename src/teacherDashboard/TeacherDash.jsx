@@ -1,10 +1,11 @@
 import React from 'react'
 // import {Link} from 'react-router'
-// import firebase from 'firebase';
+import firebase from 'firebase';
 
 const TeacherDash = React.createClass({
-  render(){
 
+  render(){
+    console.log(this.props.token)
     return (
       // TODO setup logout with firebase
       <div>
@@ -15,9 +16,6 @@ const TeacherDash = React.createClass({
           <div className="current-lessons"></div>
           <div className="container calendar-container">
           
-          </div>
-          <div className="container calendar-container">
-            Calendar Here
           </div>
           <div className="container student-list-container">
             <ul className="student-list">
