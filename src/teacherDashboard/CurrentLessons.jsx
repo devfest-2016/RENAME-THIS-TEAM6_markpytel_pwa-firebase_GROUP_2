@@ -1,12 +1,14 @@
 import React from 'react'
 import Display from './display'
+import {postUpdateCompleteLesson} from './teacherThunkActions'
+import store from '../store'
 
 const CurrentLessons = React.createClass({
   getInitialState(){
     return {
       module: false,
       question: "",
-      lessonDate: ""
+      lesson: ""
     }
   },
   unCompletedTask(){
@@ -14,12 +16,14 @@ const CurrentLessons = React.createClass({
     this.setState({module: true, question: "Would you like to reschedule?"})
   },
 
-  completedTask(lessonDate){
+  completedTask(lesson){
     console.log("completedTask")
-    this.setState({module: true, question: "Did you get paid?", lessonDate: lessonDate})
+    this.setState({module: true, question: "Did you get paid?", lesson: lesson})
+    
   },
   closeModal(){
     this.setState({module: false})
+    store.dispatch(postUpdateCompleteLesson(this.state.lesson))
   },
   render(){
       let lessonsNotCompleted = Object.keys(this.props.lessons).filter(lesson =>{
@@ -35,7 +39,7 @@ const CurrentLessons = React.createClass({
                   + ' Date: ' + this.props.lessons[lesson].lessonDate
                   + 'Time: ' + this.props.lessons[lesson].lessonTime
                   }</p>
-            <button onClick={()=>this.completedTask(lessonObj[lesson].startDate)}>Complete</button>
+            <button onClick={()=>this.completedTask(lesson)}>Complete</button>
             <button onClick={this.unCompletedTask}>X</button>
           </li>
         )

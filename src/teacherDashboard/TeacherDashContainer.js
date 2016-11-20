@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import TeacherDash from './TeacherDash'
 
 const appToState = state => {
-  console.log(state)
+
   return {
   data: state.dashBoardReducer
 }}
