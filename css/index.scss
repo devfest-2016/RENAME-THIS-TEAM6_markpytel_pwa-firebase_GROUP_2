@@ -44,12 +44,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 0;
+
+  display: block;
 }
 
 .current-lessons-list {
   max-width: 500px;
   text-align: center;
+  padding-left: 0 !important;
 }
 
 .student-list {

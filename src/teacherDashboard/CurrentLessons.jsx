@@ -21,8 +21,8 @@ const CurrentLessons = React.createClass({
                   + ' Date: ' + this.props.lessons[lesson].lessonDate
                   + 'Time: ' + this.props.lessons[lesson].lessonTime
                   }</p>
-                  <button onClick={this.completedTask}>Yes</button>
-                  <button onClick={this.unCompletedTask}>No</button>
+                  <button onClick={this.completedTask}>Complete</button>
+                  <button onClick={this.unCompletedTask}>X</button>
             </li>
         )
       })
