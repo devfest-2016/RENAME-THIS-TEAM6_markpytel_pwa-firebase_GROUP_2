@@ -30,7 +30,45 @@ body {
 }
 
 
+<<<<<<< HEAD
 
+=======
+.rightNav{
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-content: center;
+
+  .profile-photo{
+    height: 65px;
+    border-radius: 50%;
+    border: 1px #4e4895 solid;
+  }
+
+  .logout-button{
+    display: inline-block;
+    padding: 15px 30px;
+    height: 20%;
+    text-align: center;
+    background: #d8f4e5;
+    color: #4e4895;
+    border-radius: 10px;
+    border-bottom: 4px solid lighten($login-background, $lighter);
+    &:hover {
+      background: #63d297;
+    }
+    border: $black-border;
+  }
+
+  li{
+    padding: 20px;
+  }
+
+  ul{
+    align-items: center;
+  }
+}
+>>>>>>> 6cc7d81d8b6e3187568e6797b1227202ae1cb51f
 
 .upcoming-lesson-list,
 .completed-lesson-list {

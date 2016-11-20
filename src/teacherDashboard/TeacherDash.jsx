@@ -6,7 +6,6 @@ import CurrentLessons from './CurrentLessons'
 const TeacherDash = React.createClass({
 
   render(){
-    console.log(this.props.data)
     return (
       // TODO setup logout with firebase
       <div className="home">
@@ -17,11 +16,11 @@ const TeacherDash = React.createClass({
             {this.props.data.userSchedule ? <CurrentLessons lessons={this.props.data.userSchedule.lessons} />: <h1>No Current Lessons</h1> }
           </div>
           <div className="container calendar-container">
-          
+
           </div>
           <div className="container student-list-container">
             <ul className="student-list">
-              {this.props.data.userSchedule ? 
+              {this.props.data.userSchedule ?
                 Object.keys(this.props.data.userSchedule.lessons).map((lesson, idx)=>
                   <li className="student" key={idx}>{this.props.data.userSchedule.lessons[lesson].studentName}</li>
 
