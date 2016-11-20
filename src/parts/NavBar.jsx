@@ -20,7 +20,7 @@ const NavBar = React.createClass({
         <div className='rightNav'>
           {this.props.data.userName ? <p>{"Hello " + this.props.data.userName}</p> : null}
           <ul>
-            {this.props.data.userName ? <li><a href="#" onClick={this.signOut}>Log Out</a></li> : null}
+            {this.props.data.userName ? <li><a class="logout" href="#" onClick={this.signOut}>Log Out</a></li> : null}
           </ul>
         </div>
       </header>

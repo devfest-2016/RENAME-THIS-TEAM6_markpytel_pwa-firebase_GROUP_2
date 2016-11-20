@@ -16,20 +16,22 @@ const CurrentLessons = React.createClass({
        })
       .map((lesson, idx) => {
          return (
-          <div key={idx} className="currentItem">
-            <li >
-              <p>{'Student Name: ' + this.props.lessons[lesson].studentName}</p>
-              <p>{'Date: ' + this.props.lessons[lesson].lessonDate}</p>
-              <p>{'Time: ' + this.props.lessons[lesson].lessonTime}</p>
+            <li key={idx} className="currentItem">
+              <p>{this.props.lessons[lesson].studentName
+                  + ' Date: ' + this.props.lessons[lesson].lessonDate
+                  + 'Time: ' + this.props.lessons[lesson].lessonTime
+                  }</p>
+                  <button onClick={this.completedTask}>Yes</button>
+                  <button onClick={this.unCompletedTask}>No</button>
             </li>
-            <button onClick={this.completedTask}>Yes</button>
-            <button onClick={this.unCompletedTask}>No</button>
-          </div>
         )
       })
     return (
       <div className="current-lessons">
-      {lessonsNotCompleted}
+        <ul className="current-lessons-list">
+          {lessonsNotCompleted}
+        </ul>
+
       </div>
     )
   }

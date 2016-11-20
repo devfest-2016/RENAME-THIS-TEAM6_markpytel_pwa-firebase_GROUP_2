@@ -3,21 +3,38 @@
   $purple: rgb(78, 72, 149);
   $orange: rgb(255, 91, 1);
   $teal: rgb(42, 111, 136);
+  $black: #333;
   $gray: rgb(184, 186, 203);
   $white: rgb(254, 254, 254);
   $lighter: 20%;
 
-  $black-border: 1px solid black;
+  $black-border: 1px solid #ddd;
+  $default-color: $black;
 
   $body-background: $white;
   $login-background: $gray;
+  $navbar-background: $white;
   $title-color: $purple;
+* {
+  color: $default-color;
+}
 
 a {
   text-decoration: none;
   color: black;
   font-family: 'Raleway', sans-serif;
-  transition: 0.5s;
+  transition: 0.3s;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0 20px;
+  transition: 0.3s;
+  &:hover {
+    background: $gray;
+
+  }
 }
 
 h3 {
@@ -29,7 +46,29 @@ body {
   padding: 0;
   font-family: sans-serif;
   text-align: center;
-  background-color: $white;
+  background-color: $body-background;
+}
+
+.current-lessons {
+  text-align: center;
+  min-width: 500px;
+}
+
+.current-lessons-list {
+  max-width: 500px;
+}
+
+.student-list {
+  max-width: 500px;
+}
+
+.currentItem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $gray;
+}
+.currentItem p{
+  margin-left: 20px;
 }
 
 .calendar-container {
@@ -39,7 +78,7 @@ body {
   display: inline-flex;
 }
 
-.login {
+.login, .logout {
   font-size: 2em;
   padding: 20px 10px;
   margin-left: 20px;
@@ -54,11 +93,12 @@ body {
 }
 
 .navbar {
-  border-bottom: 1px solid black;
+  border-bottom: $black-border;
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
   vertical-align: middle;
+  background-color: $navbar-background;
 }
 
 .navbar ul {
@@ -81,7 +121,6 @@ body {
   &:active {
     border-bottom: none;
   }
-  border: $black-border;
 }
 
 .rightNav{
@@ -143,7 +182,7 @@ a.hide, li.hide {
   display: none;
 }
 
-/* for the calendar */
+/****** for the calendar *******/
 .rbc-btn {
   color: inherit;
   font: inherit;
@@ -680,12 +719,3 @@ button.rbc-input::-moz-focus-inner {
   border-radius: 50%;
   width: 8px;
   height: 8px; }
-
-.currentItem {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid $gray;
-}
-.currentItem li{
-  display: flex;
-}

@@ -1,0 +1,33 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": "auth != null",
+    "users": {
+    },
+    "studentRoles": {
+      "$uid": {
+        ".write": "$uid == auth.uid"
+      }
+    },
+    "schedules": {
+      "$uid": {
+      ".read": "root.child('studentRoles').child(auth.uid).exists() 
+                && ($uid == auth.uid || 
+                    root.child('tutorStudents').child(auth.uid).child($uid).exists())"
+        
+      }
+    },
+    "tutorStudents": {
+      "$uid": {
+        "$studentUid": {
+                    ".read": true
+                    }
+      }
+    }
+    
+  }
+  /* 
+  ref.child("userRoles").child(currentUser.uid).on("value", function(snapshot) {
+  	var role = snapshot.val();	
+  })*/
+}

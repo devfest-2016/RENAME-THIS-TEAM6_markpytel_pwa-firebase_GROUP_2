@@ -1,9 +1,20 @@
 @charset "UTF-8";
+* {
+  color: #333; }
+
 a {
   text-decoration: none;
   color: black;
   font-family: 'Raleway', sans-serif;
-  transition: 0.5s; }
+  transition: 0.3s; }
+
+button {
+  background: none;
+  border: none;
+  padding: 0 20px;
+  transition: 0.3s; }
+  button:hover {
+    background: #b8bacb; }
 
 h3 {
   padding-top: 0; }
@@ -15,13 +26,31 @@ body {
   text-align: center;
   background-color: #fefefe; }
 
+.current-lessons {
+  text-align: center;
+  min-width: 500px; }
+
+.current-lessons-list {
+  max-width: 500px; }
+
+.student-list {
+  max-width: 500px; }
+
+.currentItem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #b8bacb; }
+
+.currentItem p {
+  margin-left: 20px; }
+
 .calendar-container {
   margin: 0 25px;
   width: 600px;
   height: 500px;
   display: inline-flex; }
 
-.login {
+.login, .logout {
   font-size: 2em;
   padding: 20px 10px;
   margin-left: 20px;
@@ -30,15 +59,16 @@ body {
   border-radius: 10px;
   border-bottom: 4px solid #f3f3f6;
   display: inline-block; }
-  .login:active {
+  .login:active, .logout:active {
     border-bottom: none; }
 
 .navbar {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ddd;
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  vertical-align: middle; }
+  vertical-align: middle;
+  background-color: #fefefe; }
 
 .navbar ul {
   list-style-type: none;
@@ -55,8 +85,7 @@ body {
   text-align: center;
   background: #b8bacb;
   border-radius: 10px;
-  border-bottom: 4px solid #f3f3f6;
-  border: 1px solid black; }
+  border-bottom: 4px solid #f3f3f6; }
   .navbar li:active {
     border-bottom: none; }
 
@@ -78,7 +107,7 @@ body {
 
 li.lesson:not(first-of-type),
 li.student:not(first-of-type) {
-  border: 1px solid black;
+  border: 1px solid #ddd;
   width: 200px;
   padding: 15px 30px; }
 
@@ -98,7 +127,7 @@ li.student:not(first-of-type) {
   height: auto; }
 
 header p {
-  border: 1px solid black; }
+  border: 1px solid #ddd; }
 
 #title {
   font-size: 15vw;
@@ -108,7 +137,7 @@ header p {
 a.hide, li.hide {
   display: none; }
 
-/* for the calendar */
+/****** for the calendar *******/
 .rbc-btn {
   color: inherit;
   font: inherit;
@@ -645,13 +674,5 @@ button.rbc-input::-moz-focus-inner {
   border-radius: 50%;
   width: 8px;
   height: 8px; }
-
-.currentItem {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #b8bacb; }
-
-.currentItem li {
-  display: flex; }
 
 /*# sourceMappingURL=index.css.map */
