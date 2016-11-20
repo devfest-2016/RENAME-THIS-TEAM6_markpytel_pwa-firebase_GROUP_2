@@ -2,6 +2,8 @@ import React from 'react'
 import { browserHistory, Link} from 'react-router'
 import firebase from 'firebase';
 
+import store from '../store';
+
 const HomePage = React.createClass({
   componentDidMount() {
   // Initialize Firebase
@@ -24,7 +26,6 @@ signIn(userType) {
     var token = result.credential.accessToken;
     var user = result.user;
     var userId = user.uid;
-
     database.ref('users/' + userId).set({
       userType: userType
     });

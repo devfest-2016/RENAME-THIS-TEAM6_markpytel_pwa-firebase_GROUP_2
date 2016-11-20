@@ -12,7 +12,7 @@ const TeacherDash = React.createClass({
           <div className="notification-bar"></div>
           <div className="current-lessons"></div>
           <div className="container calendar-container">
-            Calendar Here
+          
           </div>
           <div className="container calendar-container">
             Calendar Here
