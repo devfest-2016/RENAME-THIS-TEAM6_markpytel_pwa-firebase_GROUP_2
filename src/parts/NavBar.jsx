@@ -3,15 +3,14 @@ import { browserHistory, Link } from 'react-router'
 import firebase from 'firebase'
 
 const NavBar = React.createClass({
-
   signOut() {
     firebase.auth().signOut().then(function() {
-      browserHistory.push('/')
+      browserHistory.replace('/')
     });
+    this.props.data.userName = ''
   },
 
   render(){
-    console.log(this.props.data)
     return (
       <header className="navbar">
         <div className="logo">
@@ -21,7 +20,7 @@ const NavBar = React.createClass({
         <div className='rightNav'>
           {this.props.data.userName ? <p>{"Hello " + this.props.data.userName}</p> : null}
           <ul>
-            <li><a href="#" onClick={this.signOut}>Log Out</a></li>
+            {this.props.data.userName ? <li><a href="#" onClick={this.signOut}>Log Out</a></li> : null}
           </ul>
         </div>
       </header>
