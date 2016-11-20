@@ -44,7 +44,8 @@ body {
   display: flex; }
 
 .logo {
-  height: 100px; }
+  height: 100px;
+  margin: 10px; }
 
 #title {
   font-size: 15vw;
