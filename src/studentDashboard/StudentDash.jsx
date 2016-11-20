@@ -6,14 +6,9 @@ import { connect } from 'react-redux';
 import CalendarService from '../services/CalendarService';
 
 const StudentDash = React.createClass({
-  
-  getInitialState(props) {
-    console.log(this.props)
-  },
-
   componentDidMount() {
     CalendarService.getCalendar(({token: this.props.token}), (data) => {
-
+      console.log(data)
     })
   },
 

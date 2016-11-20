@@ -3,7 +3,7 @@ class CalendarService {
     fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
       method: 'GET',
       headers: {
-        'auth-token': data.token
+        'Authorization': 'Bearer ' + data.token,
       }
     }).then((response) => {
       return response.json();
