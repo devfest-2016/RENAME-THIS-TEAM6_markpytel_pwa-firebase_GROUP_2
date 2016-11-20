@@ -36,8 +36,8 @@ const CurrentLessons = React.createClass({
          return (
           <li key={idx} className="currentItem">
               <p>{this.props.lessons[lesson].studentName
-                  + ' Date: ' + this.props.lessons[lesson].lessonDate
-                  + 'Time: ' + this.props.lessons[lesson].lessonTime
+                  + ' - ' + this.props.lessons[lesson].lessonDate
+                  + ' at ' + this.props.lessons[lesson].lessonTime
                   }</p>
             <button onClick={()=>this.completedTask(lesson)}>Complete</button>
             <button onClick={this.unCompletedTask}>X</button>
@@ -48,10 +48,12 @@ const CurrentLessons = React.createClass({
       <div className="current-lessons">
         {lessonsNotCompleted}
         <Display if={this.state.module}>
-          <div>
-            <p>{this.state.question}</p>
-            <button onClick={this.closeModal}>Yes</button>
-            <button onClick={this.closeModal}>No</button>
+          <div className="modal-container">
+            <div className="modal">
+              <p>{this.state.question}</p>
+              <button onClick={this.closeModal}>Yes</button>
+              <button onClick={this.closeModal}>No</button>
+            </div>
           </div>
         </Display>
       </div>

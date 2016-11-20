@@ -1,6 +1,7 @@
 @import "variables.scss";
 @import "homepage.scss";
 @import "navbar.scss";
+@import "modal.scss";
 
 * {
   color: $default-color;
@@ -64,7 +65,7 @@ body {
   border: 1px solid $gray;
 }
 .currentItem p{
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .calendar-container {
