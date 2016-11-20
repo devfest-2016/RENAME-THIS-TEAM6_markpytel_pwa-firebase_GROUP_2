@@ -14,9 +14,6 @@ const TeacherDash = React.createClass({
           <div className="container calendar-container">
             Calendar Here
           </div>
-          <div className="container calendar-container">
-            Calendar Here
-          </div>
           <div className="container student-list-container">
             <ul className="student-list">
               <li className="student">student1</li>

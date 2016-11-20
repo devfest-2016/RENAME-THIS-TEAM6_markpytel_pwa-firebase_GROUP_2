@@ -20,12 +20,21 @@ a {
   transition: 0.5s;
 }
 
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   text-align: center;
   background-color: $white;
+}
+
+.calendar-container {
+  border: $black-border;
+  margin: 0 20px;
+  width: 700px;
+  height: 500px;
+  display: inline-flex;
 }
 
 .login {
@@ -52,7 +61,8 @@ body {
 
 .navbar ul {
   list-style-type: none;
-  display: inline-block;
+  display: inline-flex;
+  flex-flow: wrap;
 //  border: $black-border;
 }
 
@@ -65,13 +75,23 @@ body {
   background: $login-background;
   border-radius: 10px;
   border-bottom: 4px solid lighten($login-background, $lighter);
-  display: inline-block;
   &:active {
     border-bottom: none;
   }
 //  border: $black-border;
 }
 
+.upcoming-lesson-list {
+  list-style-type: none;
+  margin-top: 0px;
+}
+
+li.lesson:not(first-of-type),
+li.student:not(first-of-type) {
+  border: $black-border;
+  width: 250px;
+  padding: 15px 30px;
+}
 .container {
   display: flex;
 }

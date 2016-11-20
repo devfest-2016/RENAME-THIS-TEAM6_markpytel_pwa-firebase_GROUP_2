@@ -7,17 +7,14 @@ const StudentDash = React.createClass({
     return (
       // TODO setup logout with firebase
       <div>
-      <h1 id="">Teacher Dashboard</h1>
+        <h1 id="">Student Dashboard</h1>
         <div className="container">
           <div className="notification-bar"></div>
           <div className="current-lessons"></div>
-          <div className="container calendar-container">
+          <div className="calendar-container">
             Calendar Here
           </div>
-          <div className="container calendar-container">
-            Calendar Here
-          </div>
-          <div className="container upcoming-lesson-list-container">
+          <div className="upcoming-lesson-list-container">
             <ul className="upcoming-lesson-list">
               <li className="lesson">Lesson1</li>
               <li className="lesson">Lesson2</li>
