@@ -11,10 +11,7 @@
     },
     "schedules": {
       "$uid": {
-      ".read": "root.child('studentRoles').child(auth.uid).exists() 
-                && ($uid == auth.uid || 
-                    root.child('tutorStudents').child(auth.uid).child($uid).exists())"
-        
+      ".read": "root.child('studentRoles').child(auth.uid).exists() && ($uid == auth.uid || root.child('tutorStudents').child(auth.uid).child($uid).exists())"
       }
     },
     "tutorStudents": {
@@ -24,10 +21,10 @@
                     }
       }
     }
-    
+
   }
-  /* 
+  /*
   ref.child("userRoles").child(currentUser.uid).on("value", function(snapshot) {
-  	var role = snapshot.val();	
+  	var role = snapshot.val();
   })*/
 }
