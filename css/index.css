@@ -185,6 +185,22 @@ body {
   .rightNav ul {
     align-items: center; }
 
+.loginButtons {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5%; }
+
+.login {
+  padding: 20px 40px;
+  background: rgba(134, 129, 194, 0.6);
+  border: 5px #4e4895 solid;
+  border-radius: 5%;
+  font-size: 30px;
+  max-width: 300px; }
+
+.login:active {
+  border-bottom: none; }
+
 .upcoming-lesson-list,
 .completed-lesson-list {
   text-align: center;
