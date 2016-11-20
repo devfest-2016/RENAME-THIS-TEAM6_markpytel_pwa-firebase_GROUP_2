@@ -33,6 +33,7 @@ const HomePage = React.createClass({
 
   render() {
     return (
+      <div>
       <div className="home">
         <h1 id="title">LESS SCHEDULING MORE TEACHING</h1>
         <div className="loginButtons">
@@ -45,6 +46,7 @@ const HomePage = React.createClass({
             <p>Person who is studying in order to advance themselves</p>
           </Link>
         </div>
+      </div>
       </div>
     )
   }

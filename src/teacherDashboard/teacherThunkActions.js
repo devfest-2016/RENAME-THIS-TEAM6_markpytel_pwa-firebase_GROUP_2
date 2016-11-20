@@ -8,18 +8,10 @@ export const getTutor = teacher => ({
 
 //get All blog post and send to store
 export const getTutorDataAsync = () => (dispatch) => {
-  console.log("async")
-  $.ajax({
-    url: "https://team-success-9ce1b.firebaseio.com/users/user1.json"
+  const rootRef = firebase.database().ref().child('users')
+  const user1Ref = rootRef.child('user1')
+  user1Ref.on('value', snap => {
+    console.log(snap.val())
+    dispatch(getTutor(snap.val()))
   })
-  .done(data => {
-    dispatch(getTutor(data))
-  })
-  // const rootRef = firebase.database().ref().child('react')
-  // console.log(rootRef)
-  // const speedRef = rootRef.child('speed')
-  // speedRef.on('value', snap => {
-  //   console.log(snap.val())
-  //   dispatch(getTutor(snap.val()))
-  // })
 }
