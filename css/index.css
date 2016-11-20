@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
   color: black;
@@ -12,8 +13,7 @@ body {
   background-color: #fefefe; }
 
 .calendar-container {
-  border: 1px solid black;
-  margin: 0 20px;
+  margin: 0 25px;
   width: 700px;
   height: 500px;
   display: inline-flex; }
@@ -54,18 +54,23 @@ body {
   .navbar li:active {
     border-bottom: none; }
 
-.upcoming-lesson-list {
+.upcoming-lesson-list,
+.completed-lesson-list {
   list-style-type: none;
   margin-top: 0px; }
 
 li.lesson:not(first-of-type),
 li.student:not(first-of-type) {
   border: 1px solid black;
-  width: 250px;
+  width: 200px;
   padding: 15px 30px; }
 
 .container {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto; }
 
 .logo {
   height: 110px;
@@ -617,5 +622,5 @@ button.rbc-input::-moz-focus-inner {
   border-radius: 50%;
   width: 8px;
   height: 8px; }
-  
+
 /*# sourceMappingURL=index.css.map */
