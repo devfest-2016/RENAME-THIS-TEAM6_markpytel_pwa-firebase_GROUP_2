@@ -3,6 +3,8 @@ import React from 'react'
 import firebase from 'firebase';
 import CurrentLessons from './CurrentLessons'
 
+import Calendar from '../calendar/Calendar';
+
 const TeacherDash = React.createClass({
 
   render(){
@@ -17,7 +19,7 @@ const TeacherDash = React.createClass({
             {this.props.data.userSchedule ? <CurrentLessons lessons={this.props.data.userSchedule.lessons} />: <h1>No Current Lessons</h1> }
           </div>
           <div className="container calendar-container">
-
+            <Calendar />
           </div>
           <div className="container student-list-container">
             <ul className="student-list">
