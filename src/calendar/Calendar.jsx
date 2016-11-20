@@ -16,17 +16,18 @@ const Calendar = React.createClass({
                   'allDay': false,
                   'startDate': new Date(2016, 10, 20, 1),
                   'endDate': new Date(2016, 10, 20, 7)
-                  }]
+                  }],
+      availableTimes: []
     }
   },
 
   componentWillReceiveProps(nextProps) {
     let lessons = nextProps.data.userSchedule.lessons
     let events = []
-    let date = 20
+    let date = 20;
     for (let lessonName in lessons) {
       let startDigit = parseInt(lessons[lessonName].lessonTime.split('')[0])
-      let endDigit = parseInt(startDigit) + 1
+      let endDigit = startDigit + 1
       let lesson = {
         'allDay': false,
         'title': lessons[lessonName].studentName,
@@ -37,9 +38,6 @@ const Calendar = React.createClass({
       date += 1
       this.setState({myEvents: this.state.myEvents.concat(events)})
     }
-    // CalendarService.getCalendar(({token: nextProps.token}), (data) => {
-    //   console.log(data)
-    // })
   },
 
   setSlots(info) {
@@ -49,6 +47,7 @@ const Calendar = React.createClass({
                       startDate: JSON.stringify(info.start),
                       endDate: JSON.stringify(info.end)
                     }
+    let times = this.state.availableTimes.concat([available])
     this.setState({myEvents: 
       this.state.myEvents.concat(
         [{
@@ -56,10 +55,11 @@ const Calendar = React.createClass({
           'startDate': info.start,
           'endDate': info.end
         }]
-      )
+      ),
+      availableTimes: this.state.availableTimes.concat([available])
     })
-    database.ref('users/' ).push({
-      schedule: available
+    database.ref('users/user5/available').push({
+      available: times
     });
   },
 
@@ -74,6 +74,13 @@ const Calendar = React.createClass({
         selectable={true}
         onSelectSlot={(slotInfo) => {
           this.setSlots(slotInfo)
+        }}
+        onSelectEvent={(event) => {
+          alert(
+            'Event: ' + event.title + '\n\n'
+            + 'From: ' + event.startDate.toLocaleString() + '\n'
+            + 'To: ' + event.endDate.toLocaleString()
+          )
         }}
       />
     )
