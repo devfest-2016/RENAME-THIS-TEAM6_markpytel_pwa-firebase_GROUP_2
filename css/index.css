@@ -31,12 +31,6 @@
   margin: 0 auto;
   height: auto; }
 
-.rightNav {
-  display: flex;
-  width: 30%;
-  justify-content: space-around;
-  align-content: center; }
-
 .logo {
   height: 100px;
   margin-top: 10px;
@@ -48,6 +42,9 @@
 
 header p {
   border: 1px solid #ddd; }
+
+#dashboard {
+  font-size: 1.6em; }
 
 .modal-container {
   position: fixed;
@@ -212,7 +209,7 @@ body {
 
 .rightNav {
   display: flex;
-  width: 400px;
+  width: 450px;
   justify-content: flex-end;
   align-content: center;
   margin-right: 40px;

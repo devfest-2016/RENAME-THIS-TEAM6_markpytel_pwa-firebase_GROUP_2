@@ -12,13 +12,6 @@
   height: auto;
 }
 
-.rightNav{
-  display: flex;
-  width: 30%;
-  justify-content: space-around;
-  align-content: center;
-}
-
 .logo {
   height: 100px;
   margin-top: 10px;
@@ -32,4 +25,8 @@
 
 header p {
   border: $black-border
+}
+
+#dashboard {
+  font-size: 1.6em;
 }
