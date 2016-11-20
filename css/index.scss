@@ -36,13 +36,20 @@ body {
   background-color: $body-background;
 }
 
-.current-lessons {
+#current-lessons {
   text-align: center;
-  min-width: 500px;
+}
+
+.current-lessons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
 }
 
 .current-lessons-list {
   max-width: 500px;
+  text-align: center;
 }
 
 .student-list {
@@ -97,19 +104,6 @@ body {
   justify-content: center;
 }
 
-.navbar li {
-  display: inline-block;
-  padding: 15px 30px;
-  height: 20%;
-  text-align: center;
-  background: $login-background;
-  border-radius: 10px;
-  border-bottom: 4px solid lighten($login-background, $lighter);
-  &:active {
-    border-bottom: none;
-  }
-}
-
 .rightNav{
   display: flex;
   width: 30%;
@@ -127,12 +121,11 @@ body {
     padding: 15px 30px;
     height: 20%;
     text-align: center;
-    background: #d8f4e5;
-    color: #4e4895;
+    background: $logout-color;
     border-radius: 10px;
     border-bottom: 4px solid lighten($login-background, $lighter);
     &:hover {
-      background: #63d297;
+      background: lighten($purple, $lighter);
     }
     border: $black-border;
   }

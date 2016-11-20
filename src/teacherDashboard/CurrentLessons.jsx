@@ -27,7 +27,7 @@ const CurrentLessons = React.createClass({
         )
       })
     return (
-      <div className="current-lessons">
+      <div className="">
         <ul className="current-lessons-list">
           {lessonsNotCompleted}
         </ul>
