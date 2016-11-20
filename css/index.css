@@ -90,7 +90,7 @@ header p {
     color: #fefefe;
     margin: 0;
     padding: 10px 0; }
-  .dashboard .calendar-container div {
+  .dashboard #calendar {
     width: 100%; }
   .dashboard .current-lessons {
     border: 1px #4e4895 solid; }
@@ -180,7 +180,7 @@ body {
 
 .calendar-container {
   margin: 0 25px;
-  width: 600px;
+  width: 700px;
   height: 500px;
   display: inline-flex; }
 

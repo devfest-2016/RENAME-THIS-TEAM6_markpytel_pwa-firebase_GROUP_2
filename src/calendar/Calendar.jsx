@@ -27,9 +27,9 @@ const Calendar = React.createClass({
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
-    setTimeout(() => { 
+    setTimeout(() => {
       for (let index in availability) {
-        let availabilityToBeAdded = { 
+        let availabilityToBeAdded = {
             title: availability[index].title,
             startDate: new Date(JSON.parse(availability[index].startDate)),
             endDate: new Date(JSON.parse(availability[index].endDate)),
@@ -68,7 +68,7 @@ const Calendar = React.createClass({
                       endDate: JSON.stringify(info.end)
                     }
     let times = this.state.availableTimes.concat([available])
-    this.setState({myEvents: 
+    this.setState({myEvents:
       this.state.myEvents.concat(
         [{
           'title': 'Available',

@@ -15,7 +15,7 @@ const TeacherDash = React.createClass({
           <div>
             <h2>Lessons needing attention</h2>
             {this.props.data.userSchedule ? <CurrentLessons lessons={this.props.data.userSchedule.lessons} />: <h1>No Current Lessons</h1> }
-            
+
             <div className="container students">
               <h2>Your current students</h2>
               <ul className="student-list">
@@ -29,12 +29,10 @@ const TeacherDash = React.createClass({
             </div>
           </div>
           <div className="container calendar-container">
-            <div>
+            <div id="calendar">
               <h2>Calendar</h2>
             </div>
-            <div>
               <Calendar data={this.props.data}/>
-            </div>
           </div>
         </div>
       </div>
