@@ -34,11 +34,9 @@ const Calendar = React.createClass({
             startDate: new Date(JSON.parse(availability[index].startDate)),
             endDate: new Date(JSON.parse(availability[index].endDate)),
           }
-        console.log(availabilityToBeAdded)
         this.setState({
           myEvents: this.state.myEvents.concat([availabilityToBeAdded])
         })
-        console.log(availability[index])
       }
     }, 1500)
   },
