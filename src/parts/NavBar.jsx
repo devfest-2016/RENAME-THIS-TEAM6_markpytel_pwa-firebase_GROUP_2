@@ -1,6 +1,7 @@
 import React from 'react'
 
 const NavBar = React.createClass({
+
   render(){
     return (
       <header className="navbar">
