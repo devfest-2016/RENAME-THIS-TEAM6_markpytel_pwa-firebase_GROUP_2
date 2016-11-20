@@ -11,14 +11,36 @@ BigCalendar.momentLocalizer(moment);
 const Calendar = React.createClass({
   getInitialState() {
     return this.state = {
-      myEvents: [{
-                  'title': 'Sleep',
-                  'allDay': false,
-                  'startDate': new Date(2016, 10, 20, 1),
-                  'endDate': new Date(2016, 10, 20, 7)
-                  }],
+      myEvents: [],
       availableTimes: []
     }
+  },
+
+  componentDidMount() {
+    let database = firebase.database()
+    let ref = database.ref('users/user5/available');
+    let availability
+    ref.on("value", function(snapshot) {
+      let arrayOfKeys = Object.keys(snapshot.val())
+      let lastKey = arrayOfKeys[arrayOfKeys.length - 1]
+      availability = snapshot.val()[lastKey].available;
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+    setTimeout(() => { 
+      for (let index in availability) {
+        let availabilityToBeAdded = { 
+            title: availability[index].title,
+            startDate: new Date(JSON.parse(availability[index].startDate)),
+            endDate: new Date(JSON.parse(availability[index].endDate)),
+          }
+        console.log(availabilityToBeAdded)
+        this.setState({
+          myEvents: this.state.myEvents.concat([availabilityToBeAdded])
+        })
+        console.log(availability[index])
+      }
+    }, 1500)
   },
 
   componentWillReceiveProps(nextProps) {
