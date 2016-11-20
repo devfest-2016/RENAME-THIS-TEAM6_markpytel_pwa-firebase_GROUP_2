@@ -1,0 +1,47 @@
+.dashboard {
+  font-family: 'Raleway', sans-serif;
+
+  h1 {
+    font-family: 'Pompiere', cursive;
+    font-size: 50px;
+  }
+
+  .current-lessons {
+    border: 1px $purple solid;
+  }
+
+  .currentItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px $gray solid;
+    display: block;
+    text-align: left;
+    margin: 0px;
+
+    p {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .student-name {
+      display: inline-block;
+    }
+
+    .lesson-buttons {
+      display: inline-block;
+      float: right;
+      display: flex;
+      flex-direction: column;
+
+      button {
+        font-size: 20px;
+        color: $purple;
+      }
+    }
+  }
+
+  .student-list {
+    border: 1px $purple solid;
+    padding: 0px;
+  }
+}
