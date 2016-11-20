@@ -1,20 +1,6 @@
-
-//  Item background Colors:
-  $purple: rgb(78, 72, 149);
-  $orange: rgb(255, 91, 1);
-  $teal: rgb(42, 111, 136);
-  $black: #333;
-  $gray: rgb(184, 186, 203);
-  $white: rgb(254, 254, 254);
-  $lighter: 20%;
-
-  $black-border: 1px solid #ddd;
-  $default-color: $black;
-
-  $body-background: $white;
-  $login-background: $gray;
-  $navbar-background: $white;
-  $title-color: $purple;
+@import "variables.scss";
+@import "homepage.scss";
+@import "navbar.scss";
 * {
   color: $default-color;
 }
@@ -78,6 +64,7 @@ body {
   display: inline-flex;
 }
 
+<<<<<<< HEAD
 .login, .logout {
   font-size: 2em;
   padding: 20px 10px;
@@ -122,13 +109,48 @@ body {
     border-bottom: none;
   }
 }
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+
+=======
 .rightNav{
   display: flex;
   width: 30%;
   justify-content: space-around;
   align-content: center;
+
+  .profile-photo{
+    height: 65px;
+    border-radius: 50%;
+    border: 1px #4e4895 solid;
+  }
+
+  .logout-button{
+    display: inline-block;
+    padding: 15px 30px;
+    height: 20%;
+    text-align: center;
+    background: #d8f4e5;
+    color: #4e4895;
+    border-radius: 10px;
+    border-bottom: 4px solid lighten($login-background, $lighter);
+    &:hover {
+      background: #63d297;
+    }
+    border: $black-border;
+  }
+
+  li{
+    padding: 20px;
+  }
+
+  ul{
+    align-items: center;
+  }
 }
+>>>>>>> 6cc7d81d8b6e3187568e6797b1227202ae1cb51f
 
 .upcoming-lesson-list,
 .completed-lesson-list {
@@ -159,25 +181,6 @@ li.student:not(first-of-type) {
   margin: 0 auto;
 }
 
-.logo {
-  height: 100px;
-  margin: 10px;
-}
-
-.logo img {
-  width: 100%;
-  height: auto;
-}
-
-header p {
-  border: $black-border
-}
-
-#title {
-  font-size: 15vw;
-  color: $title-color;
-  font-family: 'Pompiere', cursive;
-}
 a.hide, li.hide {
   display: none;
 }
