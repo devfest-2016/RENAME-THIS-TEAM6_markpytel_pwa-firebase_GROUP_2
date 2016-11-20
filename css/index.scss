@@ -2,6 +2,7 @@
 @import "homepage.scss";
 @import "navbar.scss";
 @import "modal.scss";
+@import "dashboard.scss";
 
 * {
   color: $default-color;
@@ -57,13 +58,9 @@ body {
 
 .student-list {
   max-width: 500px;
+  list-style-type: none;
 }
 
-.currentItem {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid $gray;
-}
 .currentItem p{
   margin-left: 15px;
 }
@@ -271,6 +268,7 @@ button.rbc-input::-moz-focus-inner {
 .rbc-toolbar .rbc-toolbar-label {
   width: 100%;
   padding: 0 10px;
+  min-width: 120px;
   text-align: center; }
 
 .rbc-toolbar button {

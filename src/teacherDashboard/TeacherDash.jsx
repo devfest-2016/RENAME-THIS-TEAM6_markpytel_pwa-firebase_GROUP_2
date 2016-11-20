@@ -9,27 +9,27 @@ const TeacherDash = React.createClass({
 
   render(){
     return (
-      // TODO setup logout with firebase
-      <div>
-      <h1 id="">Teacher Dashboard</h1>
+      <div className="dashboard">
+      <h1>Teacher Dashboard</h1>
         <div className="container">
           <div className="notification-bar"></div>
-          <div className="current-lessons">
-            <h2 id="current-lessons">Lessons needing attention</h2>
+          <div>
+            <h2>Lessons needing attention</h2>
             {this.props.data.userSchedule ? <CurrentLessons lessons={this.props.data.userSchedule.lessons} />: <h1>No Current Lessons</h1> }
+            <h2>Your current students</h2>
+            <div className="container">
+              <ul className="student-list">
+                {this.props.data.userSchedule ?
+                  Object.keys(this.props.data.userSchedule.lessons).map((lesson, idx)=>
+                    <li className="student" key={idx}>{this.props.data.userSchedule.lessons[lesson].studentName}</li>
+                  )
+                : null
+                }
+              </ul>
+            </div>
           </div>
           <div className="container calendar-container">
-            <Calendar data={this.props.data}/> 
-          </div>
-          <div className="container student-list-container">
-            <ul className="student-list">
-              {this.props.data.userSchedule ?
-                Object.keys(this.props.data.userSchedule.lessons).map((lesson, idx)=>
-                  <li className="student" key={idx}>{this.props.data.userSchedule.lessons[lesson].studentName}</li>
-                )
-              : null
-              }
-            </ul>
+            <Calendar data={this.props.data}/>
           </div>
         </div>
       </div>

@@ -24,7 +24,8 @@
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  vertical-align: middle; }
+  vertical-align: middle;
+  box-shadow: 0px 5px 5px #888888; }
 
 .navbar ul {
   margin: 0 auto;
@@ -77,6 +78,42 @@ header p {
 .modal button {
   padding: 20px; }
 
+.dashboard {
+  font-family: 'Raleway', sans-serif; }
+  .dashboard h1 {
+    font-family: 'Pompiere', cursive;
+    font-size: 50px; }
+  .dashboard .current-lessons {
+    border: 1px #4e4895 solid; }
+  .dashboard .currentItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #b8bacb solid;
+    display: block;
+    text-align: left;
+    margin: 0px; }
+  .dashboard p {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .dashboard .student-name {
+    display: inline-block; }
+  .dashboard .lesson-buttons {
+    display: inline-block;
+    float: right;
+    display: flex;
+    height: 57px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch; }
+  .dashboard button {
+    font-size: 20px;
+    color: #4e4895;
+    height: 100%; }
+  .dashboard .student-list {
+    border: 1px #4e4895 solid;
+    padding: 0px; }
+
 * {
   color: #333; }
 
@@ -119,12 +156,8 @@ body {
   padding-left: 0 !important; }
 
 .student-list {
-  max-width: 500px; }
-
-.currentItem {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #b8bacb; }
+  max-width: 500px;
+  list-style-type: none; }
 
 .currentItem p {
   margin-left: 15px; }
@@ -311,6 +344,7 @@ button.rbc-input::-moz-focus-inner {
 .rbc-toolbar .rbc-toolbar-label {
   width: 100%;
   padding: 0 10px;
+  min-width: 120px;
   text-align: center; }
 
 .rbc-toolbar button {
