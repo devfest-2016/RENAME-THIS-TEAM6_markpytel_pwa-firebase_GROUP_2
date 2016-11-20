@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .home {
-  background-image: url("/teacher.jpg");
+  background-image: url("/teacher1.png");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -11,9 +11,26 @@
   font-size: 4em;
   margin: 0;
   padding: 5%;
-  color: #fefefe;
+  color: #4e4895;
   font-family: 'Pompiere', cursive; }
 
+.loginButtons {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5%; }
+
+.login {
+  width: 35vw;
+  height: 20vw;
+  font-size: 2em;
+  padding: 20px 10px;
+  margin-top: 20px;
+  background: #b8bacb;
+  border-radius: 40px;
+  border-bottom: 4px solid #f3f3f6;
+  display: inline-block; }
+  .login:active {
+    border-bottom: none; }
 
 .navbar {
   border-bottom: 1px solid black;
@@ -144,18 +161,6 @@ body {
   align-content: center;
   justify-content: center; }
 
-.navbar li {
-  display: inline-block;
-  padding: 15px 30px;
-  height: 20%;
-  text-align: center;
-  background: #b8bacb;
-  border-radius: 10px;
-  border-bottom: 4px solid #f3f3f6;
-  border: 1px solid black; }
-  .navbar li:active {
-    border-bottom: none; }
-
 .rightNav {
   display: flex;
   width: 30%;
@@ -196,32 +201,6 @@ body {
 
 .login:active {
   border-bottom: none; }
-
-.rightNav {
-  display: flex;
-  width: 30%;
-  justify-content: space-around;
-  align-content: center; }
-  .rightNav .profile-photo {
-    height: 65px;
-    border-radius: 50%;
-    border: 1px #4e4895 solid; }
-  .rightNav .logout-button {
-    display: inline-block;
-    padding: 15px 30px;
-    height: 20%;
-    text-align: center;
-    background: #d8f4e5;
-    color: #4e4895;
-    border-radius: 10px;
-    border-bottom: 4px solid #f3f3f6;
-    border: 1px solid black; }
-    .rightNav .logout-button:hover {
-      background: #63d297; }
-  .rightNav li {
-    padding: 20px; }
-  .rightNav ul {
-    align-items: center; }
 
 .upcoming-lesson-list,
 .completed-lesson-list {
