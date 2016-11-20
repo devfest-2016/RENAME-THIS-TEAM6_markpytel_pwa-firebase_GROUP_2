@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router'
+import { browserHistory, Link} from 'react-router'
 import firebase from 'firebase';
 
 const HomePage = React.createClass({
@@ -17,15 +17,20 @@ const HomePage = React.createClass({
 
 signIn(role) {
   var provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('https://www.googleapis.com/auth/calendar');
   var database = firebase.database();
 
   firebase.auth().signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
     var userId = user.uid;
+
     database.ref('userRoles/' + userId).set({
       role: role
     });
+    if (role === 'tutor') {
+      browserHistory.push('teacher/dashboard');
+    } else { browserHistory.push('student/dashboard') }
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -37,9 +42,9 @@ signIn(role) {
   render(){
     return (
       <div>
-      <h1 id="title">Teacherly</h1>
-      <Link to="#" className="login" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
-      <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
+        <h1 id="title">Teacherly</h1>
+        <Link to="/dashboard" className="login" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
+        <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
       </div>
     )
   }
