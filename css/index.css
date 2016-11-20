@@ -48,23 +48,31 @@ body {
   align-content: center;
   justify-content: center; }
 
-.navbar li {
-  display: inline-block;
-  padding: 15px 30px;
-  height: 20%;
-  text-align: center;
-  background: #b8bacb;
-  border-radius: 10px;
-  border-bottom: 4px solid #f3f3f6;
-  border: 1px solid black; }
-  .navbar li:active {
-    border-bottom: none; }
-
 .rightNav {
   display: flex;
   width: 30%;
   justify-content: space-around;
   align-content: center; }
+  .rightNav .profile-photo {
+    height: 65px;
+    border-radius: 50%;
+    border: 1px #4e4895 solid; }
+  .rightNav .logout-button {
+    display: inline-block;
+    padding: 15px 30px;
+    height: 20%;
+    text-align: center;
+    background: #d8f4e5;
+    color: #4e4895;
+    border-radius: 10px;
+    border-bottom: 4px solid #f3f3f6;
+    border: 1px solid black; }
+    .rightNav .logout-button:hover {
+      background: #63d297; }
+  .rightNav li {
+    padding: 20px; }
+  .rightNav ul {
+    align-items: center; }
 
 .upcoming-lesson-list,
 .completed-lesson-list {
