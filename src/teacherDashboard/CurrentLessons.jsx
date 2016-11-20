@@ -30,6 +30,7 @@ const CurrentLessons = React.createClass({
       .map((lesson, idx) => {
         let lessonObj = this.props.lessons
          return (
+<<<<<<< HEAD
           <div key={idx} className="currentItem">
             <li >
               <p>{'Student Name: ' + lessonObj[lesson].studentName}</p>
@@ -51,6 +52,24 @@ const CurrentLessons = React.createClass({
             <button onClick={this.closeModal}>No</button>
           </div>
         </Display>
+=======
+            <li key={idx} className="currentItem">
+              <p>{this.props.lessons[lesson].studentName
+                  + ' Date: ' + this.props.lessons[lesson].lessonDate
+                  + 'Time: ' + this.props.lessons[lesson].lessonTime
+                  }</p>
+                  <button onClick={this.completedTask}>Complete</button>
+                  <button onClick={this.unCompletedTask}>X</button>
+            </li>
+        )
+      })
+    return (
+      <div className="">
+        <ul className="current-lessons-list">
+          {lessonsNotCompleted}
+        </ul>
+
+>>>>>>> 06c7accdd4b0531d872045447833dc0cdab0da15
       </div>
     )
   }

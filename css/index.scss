@@ -2,12 +2,26 @@
 @import "homepage.scss";
 @import "navbar.scss";
 
+* {
+  color: $default-color;
+}
 
 a {
   text-decoration: none;
   color: black;
   font-family: 'Raleway', sans-serif;
-  transition: 0.5s;
+  transition: 0.3s;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0 20px;
+  transition: 0.3s;
+  &:hover {
+    background: $gray;
+
+  }
 }
 
 h3 {
@@ -19,7 +33,38 @@ body {
   padding: 0;
   font-family: sans-serif;
   text-align: center;
-  background-color: $white;
+  background-color: $body-background;
+}
+
+#current-lessons {
+  text-align: center;
+}
+
+.current-lessons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  display: block;
+}
+
+.current-lessons-list {
+  max-width: 500px;
+  text-align: center;
+  padding-left: 0 !important;
+}
+
+.student-list {
+  max-width: 500px;
+}
+
+.currentItem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $gray;
+}
+.currentItem p{
+  margin-left: 20px;
 }
 
 .calendar-container {
@@ -29,6 +74,41 @@ body {
   display: inline-flex;
 }
 
+<<<<<<< HEAD
+=======
+.login, .logout {
+  font-size: 2em;
+  padding: 20px 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  background: $login-background;
+  border-radius: 10px;
+  border-bottom: 4px solid lighten($login-background, $lighter);
+  display: inline-block;
+  &:active {
+    border-bottom: none;
+  }
+}
+
+.navbar {
+  border-bottom: $black-border;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  vertical-align: middle;
+  background-color: $navbar-background;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: inline-flex;
+  flex-flow: wrap;
+  padding: 0;
+  align-content:center;
+  justify-content: center;
+}
+
+>>>>>>> 06c7accdd4b0531d872045447833dc0cdab0da15
 .rightNav{
   display: flex;
   width: 30%;
@@ -46,12 +126,11 @@ body {
     padding: 15px 30px;
     height: 20%;
     text-align: center;
-    background: #d8f4e5;
-    color: #4e4895;
+    background: $logout-color;
     border-radius: 10px;
     border-bottom: 4px solid lighten($login-background, $lighter);
     &:hover {
-      background: #63d297;
+      background: lighten($purple, $lighter);
     }
     border: $black-border;
   }
@@ -65,6 +144,24 @@ body {
   }
 }
 
+<<<<<<< HEAD
+=======
+.loginButtons {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5%; }
+
+.login {
+  padding: 20px 40px;
+  background: rgba(lighten($purple, $lighter), 0.6);
+  border: 5px $purple solid;
+  border-radius: 5%;
+  font-size: 30px;
+  max-width: 300px;
+}
+.login:active {
+  border-bottom: none; }
+>>>>>>> 06c7accdd4b0531d872045447833dc0cdab0da15
 
 .upcoming-lesson-list,
 .completed-lesson-list {
@@ -99,7 +196,7 @@ a.hide, li.hide {
   display: none;
 }
 
-/* for the calendar */
+/****** for the calendar *******/
 .rbc-btn {
   color: inherit;
   font: inherit;
@@ -636,12 +733,3 @@ button.rbc-input::-moz-focus-inner {
   border-radius: 50%;
   width: 8px;
   height: 8px; }
-
-.currentItem {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid $gray;
-}
-.currentItem li{
-  display: flex;
-}
