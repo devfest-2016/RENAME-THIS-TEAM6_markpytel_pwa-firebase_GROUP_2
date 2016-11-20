@@ -40,7 +40,7 @@ const HomePage = React.createClass({
             <h4>Are you a tutor?</h4>
           </Link>
           <Link to="#" className="login" onClick={() => {this.signIn('student')}}>
-            <h4>Are you a student/parent?</h4>
+            <h4>Are you a student or parent?</h4>
           </Link>
         </div>
       </div>
