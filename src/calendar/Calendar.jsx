@@ -1,6 +1,7 @@
 import React from 'react'
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
+import * as firebase from 'firebase'
 import { connect } from 'react-redux';
 
 import CalendarService from '../services/CalendarService';
@@ -42,6 +43,12 @@ const Calendar = React.createClass({
   },
 
   setSlots(info) {
+    let database = firebase.database()
+    let available = {
+                      title: 'Available',
+                      startDate: JSON.stringify(info.start),
+                      endDate: JSON.stringify(info.end)
+                    }
     this.setState({myEvents: 
       this.state.myEvents.concat(
         [{
@@ -51,6 +58,9 @@ const Calendar = React.createClass({
         }]
       )
     })
+    database.ref('users/user5').push({
+        schedule: available
+      });
   },
 
   render() {
