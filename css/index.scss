@@ -83,9 +83,6 @@ body {
   border-radius: 10px;
   border-bottom: 4px solid lighten($login-background, $lighter);
   display: inline-block;
-  &:active {
-    border-bottom: none;
-  }
 }
 
 .navbar {
