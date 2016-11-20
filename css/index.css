@@ -16,9 +16,9 @@ body {
   padding: 20px 10px;
   margin-left: 20px;
   margin-top: 20px;
-  background: #ff5b01;
+  background: #b8bacb;
   border-radius: 10px;
-  border-bottom: 4px solid #ff9d67;
+  border-bottom: 4px solid #f3f3f6;
   display: inline-block; }
 
 .navbar {
@@ -35,9 +35,9 @@ body {
   padding: 15px 30px;
   margin-right: 10px;
   text-align: center;
-  background: #ff5b01;
+  background: #b8bacb;
   border-radius: 10px;
-  border-bottom: 4px solid #ff9d67;
+  border-bottom: 4px solid #f3f3f6;
   display: inline-block; }
 
 .container {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, IndexRoute, browserHistory, Router } from 'react-router';
 import App from './App';
-import Dashboard from './dashboard/Dashboard';
+import Dashboard from './dashboard/StudentDash';
 import HomePage from './homePage/HomePage'
 
 export default (
