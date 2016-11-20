@@ -27,8 +27,13 @@ signIn(userType) {
     var token = result.credential.accessToken;
     var user = result.user;
     var userId = user.uid;
+    var userData = user.providerData;
+    var userName = userData[0]["displayName"];
     database.ref('users/' + userId).set({
-      userType: userType
+      userType: userType,
+      userEmail: user.email,
+      userPhotoUrl: user.photoURL,
+      userName: userName
     });
     if (userType === 'teacher') {
       browserHistory.push('teacher/dashboard');
