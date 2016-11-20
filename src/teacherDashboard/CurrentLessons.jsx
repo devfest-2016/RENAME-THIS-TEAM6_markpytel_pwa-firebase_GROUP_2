@@ -44,10 +44,12 @@ const CurrentLessons = React.createClass({
       <div className="current-lessons">
         {lessonsNotCompleted}
         <Display if={this.state.module}>
-          <div>
-            <p>{this.state.question}</p>
-            <button onClick={this.closeModal}>Yes</button>
-            <button onClick={this.closeModal}>No</button>
+          <div className="modal-container">
+            <div className="modal">
+              <p>{this.state.question}</p>
+              <button onClick={this.closeModal}>Yes</button>
+              <button onClick={this.closeModal}>No</button>
+            </div>
           </div>
         </Display>
       </div>
