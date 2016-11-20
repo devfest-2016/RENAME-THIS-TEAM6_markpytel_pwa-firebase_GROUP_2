@@ -51,8 +51,8 @@ const Calendar = React.createClass({
       let lesson = {
         'allDay': false,
         'title': lessons[lessonName].studentName,
-        'startDate': new Date(2016, 10, date, startDigit + 12, 0, 0),
-        'endDate': new Date(2016, 10, date, endDigit + 12, 0, 0),
+        'startDate': new Date(2016, 10, date, startDigit, 0, 0),
+        'endDate': new Date(2016, 10, date, endDigit, 0, 0),
       }
       events = events.concat(lesson)
       date += 1

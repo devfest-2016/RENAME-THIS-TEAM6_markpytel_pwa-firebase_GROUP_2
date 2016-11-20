@@ -726,3 +726,10 @@ button.rbc-input::-moz-focus-inner {
   border-radius: 50%;
   width: 8px;
   height: 8px; }
+.rbc-event {
+  background: $gray;
+  width: 100% !important;
+}
+.rbc-event-label {
+  font-size: 70% !important ;
+}
