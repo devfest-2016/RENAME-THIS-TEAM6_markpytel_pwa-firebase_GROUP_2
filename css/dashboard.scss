@@ -17,7 +17,7 @@
     display: block;
     text-align: left;
     margin: 0px;
-
+  }
     p {
       margin-top: 0px;
       margin-bottom: 0px;
@@ -31,14 +31,17 @@
       display: inline-block;
       float: right;
       display: flex;
+      height: 57px;
+      position: relative;
       flex-direction: column;
-
-      button {
-        font-size: 20px;
-        color: $purple;
-      }
+      justify-content: space-around;
+      align-items: stretch;
     }
-  }
+    button {
+      font-size: 20px;
+      color: $purple;
+      height: 100%;
+    }
 
   .student-list {
     border: 1px $purple solid;

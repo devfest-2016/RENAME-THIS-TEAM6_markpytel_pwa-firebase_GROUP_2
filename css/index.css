@@ -92,19 +92,24 @@ header p {
     display: block;
     text-align: left;
     margin: 0px; }
-    .dashboard .currentItem p {
-      margin-top: 0px;
-      margin-bottom: 0px; }
-    .dashboard .currentItem .student-name {
-      display: inline-block; }
-    .dashboard .currentItem .lesson-buttons {
-      display: inline-block;
-      float: right;
-      display: flex;
-      flex-direction: column; }
-      .dashboard .currentItem .lesson-buttons button {
-        font-size: 20px;
-        color: #4e4895; }
+  .dashboard p {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .dashboard .student-name {
+    display: inline-block; }
+  .dashboard .lesson-buttons {
+    display: inline-block;
+    float: right;
+    display: flex;
+    height: 57px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch; }
+  .dashboard button {
+    font-size: 20px;
+    color: #4e4895;
+    height: 100%; }
   .dashboard .student-list {
     border: 1px #4e4895 solid;
     padding: 0px; }
