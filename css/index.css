@@ -212,9 +212,11 @@ body {
 
 .rightNav {
   display: flex;
-  width: 40%;
-  justify-content: space-around;
-  align-content: center; }
+  width: 400px;
+  justify-content: flex-end;
+  align-content: center;
+  margin-right: 40px;
+  text-align: right; }
   .rightNav .profile-photo {
     height: 65px;
     border-radius: 50%;
