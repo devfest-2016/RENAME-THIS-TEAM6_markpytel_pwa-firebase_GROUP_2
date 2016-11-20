@@ -4,7 +4,7 @@ import TeacherDash from './TeacherDash'
 
 const appToState = state => {
   console.log(state)
-  return{
+  return {
   data: state.dashBoardReducer
 }}
 
