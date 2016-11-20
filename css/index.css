@@ -623,4 +623,12 @@ button.rbc-input::-moz-focus-inner {
   width: 8px;
   height: 8px; }
 
+.currentItem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #b8bacb; }
+
+.currentItem li {
+  display: flex; }
+
 /*# sourceMappingURL=index.css.map */

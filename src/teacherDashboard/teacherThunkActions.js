@@ -1,19 +1,19 @@
 import * as firebase from 'firebase'
 import $ from 'jquery'
 
-export const getTutor = tutor => ({
+export const getTutor = teacher => ({
   type: 'ADD_TEACHER',
-  payload: tutor
+  payload: teacher
 })
 
 //get All blog post and send to store
 export const getTutorDataAsync = () => (dispatch) => {
   console.log("async")
   $.ajax({
-    url: "https://team-success.firebaseio.com/react.json"
+    url: "https://team-success-9ce1b.firebaseio.com/users/user1.json"
   })
   .done(data => {
-    console.log(data)
+    dispatch(getTutor(data))
   })
   // const rootRef = firebase.database().ref().child('react')
   // console.log(rootRef)

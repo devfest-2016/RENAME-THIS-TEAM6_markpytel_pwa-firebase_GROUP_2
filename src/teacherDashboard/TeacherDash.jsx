@@ -1,19 +1,22 @@
 import React from 'react'
 // import {Link} from 'react-router'
 import firebase from 'firebase';
+import CurrentLessons from './CurrentLessons'
 
 const TeacherDash = React.createClass({
 
   render(){
-    console.log(this.props.token)
+    console.log(this.props.data)
     return (
       // TODO setup logout with firebase
       <div>
       <h1 id="">Teacher Dashboard</h1>
         <div className="container">
-        <h1> HelloSam</h1>
+        <h1>Hello {this.props.data.userName}</h1>
           <div className="notification-bar"></div>
-          <div className="current-lessons"></div>
+          <div className="current-lessons">
+            {this.props.data.userSchedule ? <CurrentLessons lessons={this.props.data.userSchedule.lessons} />: <h1>No Current Lessons</h1> }
+          </div>
           <div className="container calendar-container">
           
           </div>

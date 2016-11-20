@@ -652,3 +652,12 @@ button.rbc-input::-moz-focus-inner {
   border-radius: 50%;
   width: 8px;
   height: 8px; }
+
+.currentItem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $gray;
+}
+.currentItem li{
+  display: flex;
+}

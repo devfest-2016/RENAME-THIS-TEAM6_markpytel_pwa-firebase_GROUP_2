@@ -1,8 +1,6 @@
 import React from 'react'
 import { browserHistory, Link } from 'react-router'
 import firebase from 'firebase';
-import {initFirebase} from '../firebase'
-
 
 import store from '../store';
 
