@@ -12,8 +12,8 @@ const Calendar = React.createClass({
      myEvents: [{
                   'title': 'All Day Event',
                   'allDay': true,
-                  'start': new Date(2016, 11, 19),
-                  'end': new Date(2016, 11, 19)
+                  'startDate': new Date(2016, 11, 19),
+                  'endDate': new Date(2016, 11, 19)
                 },
               ],
     }
@@ -23,10 +23,11 @@ const Calendar = React.createClass({
     this.setState({myEvents: 
       this.state.myEvents.concat([{
         'title': 'Available',
-        'start': info.start,
-        'end': info.end
+        'startDate': info.start,
+        'endDate': info.end
       }])
     })
+    console.log(this.state.myEvents)
   },
 
   render() {
