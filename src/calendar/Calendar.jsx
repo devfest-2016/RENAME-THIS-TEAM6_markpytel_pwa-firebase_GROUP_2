@@ -11,20 +11,39 @@ const Calendar = React.createClass({
   getInitialState() {
     return this.state = {
       myEvents: [{
-                  'title': 'All Day Event',
-                  'allDay': true,
-                  'startDate': new Date(2016, 11, 19),
-                  'endDate': new Date(2016, 11, 19)
-                },
-              ],
+                  'title': 'Sleep',
+                  'allDay': false,
+                  'startDate': new Date(2016, 10, 20, 1),
+                  'endDate': new Date(2016, 10, 20, 7)
+                  }]
     }
   },
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
-    CalendarService.getCalendar(({token: nextProps.token}), (data) => {
-      console.log(data)
-    })
+    // let lessons = nextProps.data.userSchedule.lessons
+    // let events = [{
+    //               'title': 'Sleep',
+    //               'allDay': false,
+    //               'startDate': new Date(2016, 10, 20, 1),
+    //               'endDate': new Date(2016, 10, 20, 7)
+    //               }]
+    // console.log(nextProps.data)
+    // for (let lessonName in lessons) {
+    //   let startDigit = lessons[lessonName].lessonTime.split('')[0]
+    //   let lesson = {
+    //     'allDay': false,
+    //     'title': lessons[lessonName].studentName,
+    //     'startDate': new Date(2016, 10, 21, startDigit),
+    //     'endDate': new Date(2016, 10, 21, startDigit+1),
+    //   }
+    //   // console.log(lessons[lessonName])
+    //   events = events.concat(lesson)
+    //   this.setState({myEvents: this.state.myEvents.concat(events)})
+    // }
+    console.log(this.state.myEvents)
+    // CalendarService.getCalendar(({token: nextProps.token}), (data) => {
+    //   console.log(data)
+    // })
   },
 
   setSlots(info) {
