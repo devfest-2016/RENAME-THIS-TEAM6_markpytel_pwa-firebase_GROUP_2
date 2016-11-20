@@ -91,7 +91,7 @@ header p {
     margin: 0;
     padding: 10px 0; }
   .dashboard #calendar {
-    width: 100%; }
+    width: 680px; }
   .dashboard .current-lessons {
     border: 1px #4e4895 solid; }
   .dashboard .currentItem {
@@ -443,7 +443,7 @@ button.rbc-input::-moz-focus-inner {
 .rbc-event {
   cursor: pointer;
   padding: 2px 5px;
-  background-color: #5e7990;
+  background-color: #3174ad;
   border-radius: 5px;
   color: #fff; }
 
