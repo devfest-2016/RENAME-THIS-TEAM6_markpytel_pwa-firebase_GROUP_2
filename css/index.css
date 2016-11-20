@@ -9,7 +9,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   text-align: center;
-}
+  background-color: #fefefe; }
 
 .login {
   font-size: 2em;
@@ -44,15 +44,12 @@ body {
   display: flex; }
 
 .logo {
-  height: 65px;
-  margin: 10px;
-}
+  height: 100px; }
 
 #title {
   font-size: 15vw;
   color: #4e4895;
-  font-family: 'Pompiere', cursive;
-}
+  font-family: 'Pompiere', cursive; }
 
 a.hide, li.hide {
   display: none; }
