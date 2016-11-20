@@ -21,6 +21,8 @@ const Calendar = React.createClass({
         events={myEvents}
         startAccessor='startDate'
         endAccessor='endDate'
+        timeslots={1}
+        view='week'
       />
     )
   }
