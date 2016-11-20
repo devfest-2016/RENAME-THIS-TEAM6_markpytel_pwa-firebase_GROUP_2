@@ -13,13 +13,13 @@ const TeacherDash = React.createClass({
         <h1> HelloSam</h1>
           <div className="notification-bar"></div>
           <div className="current-lessons"></div>
-          <div className="calendar-container">
+          <div className="container calendar-container">
+          
+          </div>
+          <div className="container calendar-container">
             Calendar Here
           </div>
-          <div className="calendar-container">
-            Calendar Here
-          </div>
-          <div className="student-list-container">
+          <div className="container student-list-container">
             <ul className="student-list">
               <li className="student">student1</li>
               <li className="student">student2</li>

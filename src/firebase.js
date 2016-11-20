@@ -8,6 +8,6 @@ export const initFirebase = () => {
       storageBucket: "team-success-9ce1b.appspot.com",
       messagingSenderId: "35508077639"
     }
-    firebase.initializeApp(config)
+    return firebase.initializeApp(config)
 }
 

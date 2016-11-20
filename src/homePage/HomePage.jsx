@@ -3,6 +3,8 @@ import { browserHistory, Link} from 'react-router'
 import firebase from 'firebase';
 import {initFirebase} from '../firebase'
 
+import store from '../store';
+
 const HomePage = React.createClass({
   componentDidMount() {
   // Initialize Firebase
@@ -17,7 +19,7 @@ const HomePage = React.createClass({
   initFirebase();
 },
 
-signIn(role) {
+signIn(userType) {
   var provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/calendar');
   var database = firebase.database();
@@ -26,11 +28,10 @@ signIn(role) {
     var token = result.credential.accessToken;
     var user = result.user;
     var userId = user.uid;
-
-    database.ref('userRoles/' + userId).set({
-      role: role
+    database.ref('users/' + userId).set({
+      userType: userType
     });
-    if (role === 'tutor') {
+    if (userType === 'teacher') {
       browserHistory.push('teacher/dashboard');
     } else { browserHistory.push('student/dashboard') }
   }).catch(function(error) {
@@ -45,7 +46,7 @@ signIn(role) {
     return (
       <div>
         <h1 id="title">Teacherly</h1>
-        <Link to="/teacher/dashboard" className="login" onClick={() => {this.signIn('tutor')}}>Tutor Login</Link>
+        <Link to="/dashboard" className="login" onClick={() => {this.signIn('teacher')}}>Teacher Login</Link>
         <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
       </div>
     )
