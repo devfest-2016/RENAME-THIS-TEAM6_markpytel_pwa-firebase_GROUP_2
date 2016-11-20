@@ -39,12 +39,8 @@
   vertical-align: middle; }
 
 .navbar ul {
-  list-style-type: none;
-  display: inline-flex;
-  flex-flow: wrap;
-  padding: 0;
-  align-content: center;
-  justify-content: center; }
+  margin: 0 auto;
+  height: auto; }
 
 .navbar li {
   /*

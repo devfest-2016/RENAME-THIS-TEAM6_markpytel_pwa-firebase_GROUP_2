@@ -13,7 +13,7 @@ const TeacherDash = React.createClass({
         <div className="container">
           <div className="notification-bar"></div>
           <div className="current-lessons">
-            <h1 id="current-lessons">Lessons needing attention</h1>
+            <h2 id="current-lessons">Lessons needing attention</h2>
             {this.props.data.userSchedule ? <CurrentLessons lessons={this.props.data.userSchedule.lessons} />: <h1>No Current Lessons</h1> }
           </div>
           <div className="container calendar-container">
