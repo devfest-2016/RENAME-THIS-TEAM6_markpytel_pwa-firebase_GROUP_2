@@ -10,21 +10,17 @@ const HomePage = React.createClass({
     provider.addScope('https://www.googleapis.com/auth/calendar');
     var database = firebase.database();
 
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
-      var userId = user.uid;
-      database.ref('users/' + userId).set({
-        userType: userType
-      });
-      if (userType === 'teacher') {
-        browserHistory.push('teacher/dashboard');
-      } else { browserHistory.push('student/dashboard') }
-    }).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      var email = error.email;
-      var credential = error.credential;
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    var token = result.credential.accessToken;
+    var user = result.user;
+    var userId = user.uid;
+    var userData = user.providerData;
+    var userName = userData[0]["displayName"];
+    database.ref('users/' + userId).set({
+      userType: userType,
+      userEmail: user.email,
+      userPhotoUrl: user.photoURL,
+      userName: userName
     });
   },
 
