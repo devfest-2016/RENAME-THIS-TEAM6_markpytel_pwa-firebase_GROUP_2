@@ -19,7 +19,43 @@
   },
   "lesson4" : {
     "studentName" : "Trisha",
-    "lessonDate" : "Nov 2, 2016",
+    "lessonDate" : "Nov 3, 2016",
+    "lessonTime" : "5:00pm EST",
+    "lessonComplete?" : true
+  },
+  "lesson5" : {
+    "studentName" : "Joseph",
+    "lessonDate" : "Nov 20, 2016",
+    "lessonTime" : "6:30pm EST",
+    "lessonComplete?" : false
+  },
+  "lesson6" : {
+    "studentName" : "Ray",
+    "lessonDate" : "Dec 23, 2016",
+    "lessonTime" : "5:00pm EST",
+    "lessonComplete?" : true
+  },
+  "lesson7" : {
+    "studentName" : "Harry",
+    "lessonDate" : "Nov 20, 2016",
+    "lessonTime" : "7:00pm EST",
+    "lessonComplete?" : false
+  },
+  "lesson8" : {
+    "studentName" : "Harry",
+    "lessonDate" : "Nov 22, 2016",
+    "lessonTime" : "8:00pm EST",
+    "lessonComplete?" : true
+  },
+  "lesson9" : {
+    "studentName" : "Samantha",
+    "lessonDate" : "Nov 23, 2016",
+    "lessonTime" : "7:30pm EST",
+    "lessonComplete?" : false
+  },
+  "lesson10" : {
+    "studentName" : "Jennifer",
+    "lessonDate" : "Nov 22, 2016",
     "lessonTime" : "5:00pm EST",
     "lessonComplete?" : true
   }
