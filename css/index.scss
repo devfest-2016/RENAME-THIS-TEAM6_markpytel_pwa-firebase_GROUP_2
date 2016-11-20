@@ -1,6 +1,7 @@
 @import "variables.scss";
 @import "homepage.scss";
 @import "navbar.scss";
+
 * {
   color: $default-color;
 }
@@ -64,7 +65,6 @@ body {
   display: inline-flex;
 }
 
-<<<<<<< HEAD
 .login, .logout {
   font-size: 2em;
   padding: 20px 10px;
@@ -109,12 +109,7 @@ body {
     border-bottom: none;
   }
 }
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/master
-
-=======
 .rightNav{
   display: flex;
   width: 30%;
@@ -150,7 +145,6 @@ body {
     align-items: center;
   }
 }
->>>>>>> 6cc7d81d8b6e3187568e6797b1227202ae1cb51f
 
 .upcoming-lesson-list,
 .completed-lesson-list {

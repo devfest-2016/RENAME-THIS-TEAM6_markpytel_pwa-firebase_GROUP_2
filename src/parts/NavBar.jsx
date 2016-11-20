@@ -20,12 +20,8 @@ const NavBar = React.createClass({
 
         <div className='rightNav'>
           <ul>
-<<<<<<< HEAD
-            {this.props.data.userName ? <li><a class="logout" href="#" onClick={this.signOut}>Log Out</a></li> : null}
-=======
             {this.props.data.userPhotoUrl ? <li><img src={this.props.data.userPhotoUrl} className="profile-photo" alt="Your face" /></li> : null}
             {this.props.data.userName ? <li><a href="#" onClick={this.signOut} className="logout-button">Log Out</a></li> : null}
->>>>>>> origin/master
           </ul>
         </div>
       </header>
