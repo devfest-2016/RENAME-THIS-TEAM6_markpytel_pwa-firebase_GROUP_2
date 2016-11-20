@@ -1,17 +1,7 @@
+@import "variables.scss";
+@import "homepage.scss";
+@import "navbar.scss";
 
-//  Item background Colors:
-  $purple: rgb(78, 72, 149);
-  $orange: rgb(255, 91, 1);
-  $teal: rgb(42, 111, 136);
-  $gray: rgb(184, 186, 203);
-  $white: rgb(254, 254, 254);
-  $lighter: 20%;
-
-  $black-border: 1px solid black;
-
-  $body-background: $white;
-  $login-background: $gray;
-  $title-color: $purple;
 
 a {
   text-decoration: none;
@@ -39,57 +29,8 @@ body {
   display: inline-flex;
 }
 
-.login {
-  font-size: 2em;
-  padding: 20px 10px;
-  margin-left: 20px;
-  margin-top: 20px;
-  background: $login-background;
-  border-radius: 10px;
-  border-bottom: 4px solid lighten($login-background, $lighter);
-  display: inline-block;
-  &:active {
-    border-bottom: none;
-  }
-}
 
-.navbar {
-  border-bottom: 1px solid black;
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-between;
-  vertical-align: middle;
-}
 
-.navbar ul {
-  list-style-type: none;
-  display: inline-flex;
-  flex-flow: wrap;
-  padding: 0;
-  align-content:center;
-  justify-content: center;
-}
-
-.navbar li {
-  display: inline-block;
-  padding: 15px 30px;
-  height: 20%;
-  text-align: center;
-  background: $login-background;
-  border-radius: 10px;
-  border-bottom: 4px solid lighten($login-background, $lighter);
-  &:active {
-    border-bottom: none;
-  }
-  border: $black-border;
-}
-
-.rightNav{
-  display: flex;
-  width: 30%;
-  justify-content: space-around;
-  align-content: center;
-}
 
 .upcoming-lesson-list,
 .completed-lesson-list {
@@ -120,25 +61,6 @@ li.student:not(first-of-type) {
   margin: 0 auto;
 }
 
-.logo {
-  height: 100px;
-  margin: 10px;
-}
-
-.logo img {
-  width: 100%;
-  height: auto;
-}
-
-header p {
-  border: $black-border
-}
-
-#title {
-  font-size: 15vw;
-  color: $title-color;
-  font-family: 'Pompiere', cursive;
-}
 a.hide, li.hide {
   display: none;
 }

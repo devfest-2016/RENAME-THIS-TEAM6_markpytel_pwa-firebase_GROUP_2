@@ -33,10 +33,18 @@ const HomePage = React.createClass({
 
   render() {
     return (
-      <div>
-        <h1 id="title">Teacherly</h1>
-        <Link to="#" className="login" onClick={() => {this.signIn('teacher')}}>Teacher Login</Link>
-        <Link to="#" className="login" onClick={() => {this.signIn('student')}}>Student Login</Link>
+      <div className="home">
+        <h1 id="title">LESS SCHEDULING MORE TEACHING</h1>
+        <div className="loginButtons">
+          <Link to="#" className="login" onClick={() => {this.signIn('teacher')}}>
+              <h4>TEACHER LOGIN</h4>
+              <p>Educator who provides education for students</p>
+          </Link>
+          <Link to="#" className="login" onClick={() => {this.signIn('student')}}>
+            <h4>STUDENT LOGIN</h4>
+            <p>Person who is studying in order to advance themselves</p>
+          </Link>
+        </div>
       </div>
     )
   }

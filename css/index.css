@@ -1,33 +1,32 @@
 @charset "UTF-8";
-a {
-  text-decoration: none;
-  color: black;
-  font-family: 'Raleway', sans-serif;
-  transition: 0.5s; }
-
-h3 {
-  padding-top: 0; }
-
-body {
+.home {
+  background-image: url("../public/teacher.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  text-align: center;
-  background-color: #fefefe; }
+  height: 85vh; }
 
-.calendar-container {
-  margin: 0 25px;
-  width: 600px;
-  height: 500px;
-  display: inline-flex; }
+#title {
+  font-size: 4em;
+  margin: 0;
+  padding: 5%;
+  color: #fefefe;
+  font-family: 'Pompiere', cursive; }
+
+.loginButtons {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 5%; }
 
 .login {
+  width: 35vw;
+  height: 20vw;
   font-size: 2em;
   padding: 20px 10px;
-  margin-left: 20px;
   margin-top: 20px;
   background: #b8bacb;
-  border-radius: 10px;
+  border-radius: 40px;
   border-bottom: 4px solid #f3f3f6;
   display: inline-block; }
   .login:active {
@@ -66,6 +65,39 @@ body {
   justify-content: space-around;
   align-content: center; }
 
+.logo {
+  height: 100px;
+  margin: 10px; }
+
+.logo img {
+  width: 100%;
+  height: auto; }
+
+header p {
+  border: 1px solid black; }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  transition: 0.5s; }
+
+h3 {
+  padding-top: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #fefefe; }
+
+.calendar-container {
+  margin: 0 25px;
+  width: 600px;
+  height: 500px;
+  display: inline-flex; }
+
 .upcoming-lesson-list,
 .completed-lesson-list {
   text-align: center;
@@ -88,22 +120,6 @@ li.student:not(first-of-type) {
   justify-content: center;
   max-width: 1080px;
   margin: 0 auto; }
-
-.logo {
-  height: 100px;
-  margin: 10px; }
-
-.logo img {
-  width: 100%;
-  height: auto; }
-
-header p {
-  border: 1px solid black; }
-
-#title {
-  font-size: 15vw;
-  color: #4e4895;
-  font-family: 'Pompiere', cursive; }
 
 a.hide, li.hide {
   display: none; }

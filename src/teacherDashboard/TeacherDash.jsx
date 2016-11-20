@@ -9,7 +9,7 @@ const TeacherDash = React.createClass({
     console.log(this.props.data)
     return (
       // TODO setup logout with firebase
-      <div>
+      <div className="home">
       <h1 id="">Teacher Dashboard</h1>
         <div className="container">
           <div className="notification-bar"></div>
