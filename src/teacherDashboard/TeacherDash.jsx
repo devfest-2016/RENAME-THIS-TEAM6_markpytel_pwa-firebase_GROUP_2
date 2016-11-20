@@ -26,7 +26,6 @@ const TeacherDash = React.createClass({
               {this.props.data.userSchedule ?
                 Object.keys(this.props.data.userSchedule.lessons).map((lesson, idx)=>
                   <li className="student" key={idx}>{this.props.data.userSchedule.lessons[lesson].studentName}</li>
-
                 )
               : null
               }
