@@ -43,19 +43,30 @@ body {
 .navbar ul {
   list-style-type: none;
   display: inline-flex;
-  flex-flow: wrap; }
+  flex-flow: wrap;
+  padding: 0;
+  border: 1px solid black;
+  align-content: center;
+  justify-content: center; }
 
 .navbar li {
   display: inline-block;
   padding: 15px 30px;
-  margin-right: 40px;
-  margin-top: 15px;
+  height: 20%;
   text-align: center;
   background: #b8bacb;
   border-radius: 10px;
-  border-bottom: 4px solid #f3f3f6; }
+  border-bottom: 4px solid #f3f3f6;
+  border: 1px solid black; }
   .navbar li:active {
     border-bottom: none; }
+
+.rightNav {
+  border: 1px solid black;
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-content: center; }
 
 .upcoming-lesson-list,
 .completed-lesson-list {
@@ -81,9 +92,17 @@ li.student:not(first-of-type) {
   margin: 0 auto; }
 
 .logo {
-  height: 110px;
+  width: 10%;
+  height: auto;
   text-align: center;
   display: inline-block; }
+
+.logo img {
+  width: 100%;
+  height: auto; }
+
+header p {
+  border: 1px solid black; }
 
 #title {
   font-size: 15vw;

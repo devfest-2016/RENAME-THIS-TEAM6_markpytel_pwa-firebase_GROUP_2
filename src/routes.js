@@ -1,9 +1,10 @@
 import React from 'react'
 import { Route, IndexRoute, browserHistory, Router } from 'react-router';
+import AppContainer from './app/AppContainer';
 import App from './App';
 import StudentDash from './studentDashboard/StudentDash';
 import TeacherDashContainer from './teacherDashboard/TeacherDashContainer';
-import HomePage from './homePage/HomePage'
+//import HomePage from './homePage/HomePage'
 
 //redux
 import store from './store'
@@ -13,8 +14,8 @@ const getTutorData = () => {store.dispatch(getTutorDataAsync())}
 
 export default (
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={HomePage}/>
+    <Route path="/" component={AppContainer}>
+      {/*<IndexRoute component={HomePage}/>*/}
       <Route path="teacher/dashboard" component={TeacherDashContainer} onEnter={getTutorData} />
       <Route path="student/dashboard" component={StudentDash} />
     </Route>

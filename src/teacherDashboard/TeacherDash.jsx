@@ -12,7 +12,6 @@ const TeacherDash = React.createClass({
       <div>
       <h1 id="">Teacher Dashboard</h1>
         <div className="container">
-        <h1>Hello {this.props.data.userName}</h1>
           <div className="notification-bar"></div>
           <div className="current-lessons">
             {this.props.data.userSchedule ? <CurrentLessons lessons={this.props.data.userSchedule.lessons} />: <h1>No Current Lessons</h1> }
@@ -22,10 +21,13 @@ const TeacherDash = React.createClass({
           </div>
           <div className="container student-list-container">
             <ul className="student-list">
-              <li className="student">student1</li>
-              <li className="student">student2</li>
-              <li className="student">student3</li>
-              <li className="student">student4</li>
+              {this.props.data.userSchedule ? 
+                Object.keys(this.props.data.userSchedule.lessons).map((lesson, idx)=>
+                  <li className="student" key={idx}>{this.props.data.userSchedule.lessons[lesson].studentName}</li>
+
+                )
+              : null
+              }
             </ul>
           </div>
         </div>

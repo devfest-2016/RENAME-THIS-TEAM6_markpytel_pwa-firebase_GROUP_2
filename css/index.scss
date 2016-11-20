@@ -65,14 +65,16 @@ body {
   list-style-type: none;
   display: inline-flex;
   flex-flow: wrap;
-//  border: $black-border;
+  padding: 0;
+  border: $black-border;
+  align-content:center;
+  justify-content: center;
 }
 
 .navbar li {
   display: inline-block;
   padding: 15px 30px;
-  margin-right: 40px;
-  margin-top: 15px;
+  height: 20%;
   text-align: center;
   background: $login-background;
   border-radius: 10px;
@@ -80,10 +82,16 @@ body {
   &:active {
     border-bottom: none;
   }
-//  border: $black-border;
+  border: $black-border;
 }
 
-
+.rightNav{
+  border: $black-border;
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-content: center;
+}
 
 .upcoming-lesson-list,
 .completed-lesson-list {
@@ -115,9 +123,19 @@ li.student:not(first-of-type) {
 }
 
 .logo {
-  height: 110px;
+  width: 10%;
+  height: auto;
   text-align: center;
   display: inline-block;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+header p {
+  border: $black-border
 }
 
 #title {

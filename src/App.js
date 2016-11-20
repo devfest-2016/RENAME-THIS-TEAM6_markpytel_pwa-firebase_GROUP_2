@@ -3,7 +3,7 @@ import NavBar from './parts/NavBar';
 
 const App = (props) => (
   <div>
-    <NavBar />
+    <NavBar data={props.data}/>
     {props.children}
   </div>
 );
