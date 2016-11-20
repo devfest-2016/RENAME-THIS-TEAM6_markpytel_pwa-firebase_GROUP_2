@@ -21,7 +21,8 @@ const HomePage = React.createClass({
         userType: userType,
         userEmail: user.email,
         userPhotoUrl: user.photoURL,
-        userName: userName
+        userName: userName,
+        token: userId
       });
       if (userType === 'teacher') {
         browserHistory.push('teacher/dashboard');
