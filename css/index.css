@@ -45,7 +45,6 @@ body {
   display: inline-flex;
   flex-flow: wrap;
   padding: 0;
-  border: 1px solid black;
   align-content: center;
   justify-content: center; }
 
@@ -62,7 +61,6 @@ body {
     border-bottom: none; }
 
 .rightNav {
-  border: 1px solid black;
   display: flex;
   width: 30%;
   justify-content: space-around;
