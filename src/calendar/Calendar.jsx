@@ -92,6 +92,7 @@ const Calendar = React.createClass({
         timeslots={1}
         defaultView='week'
         selectable={true}
+        min={new Date(2016, 10, 20, 6, 0, 0)}
         onSelectSlot={(slotInfo) => {
           this.setSlots(slotInfo)
         }}
