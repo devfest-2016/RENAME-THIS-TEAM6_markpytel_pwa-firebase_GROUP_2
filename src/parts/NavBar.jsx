@@ -8,6 +8,7 @@ const NavBar = React.createClass({
       browserHistory.replace('/')
     });
     this.props.data.userName = ''
+    this.props.data.userPhotoUrl = ''
   },
 
   render(){
