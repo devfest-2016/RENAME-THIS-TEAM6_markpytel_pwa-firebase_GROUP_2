@@ -1,14 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router'
-import firebase from 'firebase';
+// import {Link} from 'react-router'
+// import firebase from 'firebase';
 
 const TeacherDash = React.createClass({
   render(){
+
     return (
       // TODO setup logout with firebase
       <div>
       <h1 id="">Teacher Dashboard</h1>
         <div className="container">
+        <h1> HelloSam</h1>
           <div className="notification-bar"></div>
           <div className="current-lessons"></div>
           <div className="calendar-container">

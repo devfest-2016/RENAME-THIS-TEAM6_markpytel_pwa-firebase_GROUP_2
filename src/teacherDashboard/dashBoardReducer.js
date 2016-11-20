@@ -1,11 +1,7 @@
-const INTIAL_STATE = {
-  teacher: []
-}
-
-export default function(state = INTIAL_STATE, action) {
+export default function(state =[], action) {
   switch(action.type){
-    case 'ADD_TUTOR':
-      return Object.assign({}, state, action.payload)
+    case 'ADD_TEACHER':
+      return action.payload
     default: 
       return state
   }

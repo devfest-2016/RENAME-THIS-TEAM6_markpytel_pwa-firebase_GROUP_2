@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router'
-import firebase from 'firebase';
+// import {Link} from 'react-router'
+// import firebase from 'firebase';
 
 const StudentDash = React.createClass({
   render(){
