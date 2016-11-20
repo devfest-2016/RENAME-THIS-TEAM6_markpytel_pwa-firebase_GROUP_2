@@ -10,7 +10,6 @@ const HomePage = React.createClass({
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/calendar');
     var database = firebase.database();
-    self = this;
 
     firebase.auth().signInWithPopup(provider).then(function(result) {
       var token = result.credential.accessToken;
