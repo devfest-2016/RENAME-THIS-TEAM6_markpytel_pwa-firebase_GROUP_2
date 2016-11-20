@@ -26,14 +26,27 @@ const StudentDash = React.createClass({
           <div className="calendar-container">
             <Calendar />
           </div>
-          <div className="upcoming-lesson-list-container">
-            <ul className="upcoming-lesson-list">
-              <li className="lesson">Lesson1</li>
-              <li className="lesson">Lesson2</li>
-              <li className="lesson">Lesson3</li>
-              <li className="lesson">Lesson4</li>
-            </ul>
+          <div className="details-container">
+            <div className="completed-lesson-list-container">
+              <h3>Lessons that need attention</h3>
+              <ul className="completed-lesson-list">
+                <li className="lesson">Lesson1</li>
+                <li className="lesson">Lesson2</li>
+                <li className="lesson">Lesson3</li>
+                <li className="lesson">Lesson4</li>
+              </ul>
+            </div>
+            <div className="upcoming-lesson-list-container">
+              <h3>Upcoming Lessons</h3>
+              <ul className="upcoming-lesson-list">
+                <li className="lesson">Lesson1</li>
+                <li className="lesson">Lesson2</li>
+                <li className="lesson">Lesson3</li>
+                <li className="lesson">Lesson4</li>
+              </ul>
+            </div>
           </div>
+
         </div>
       </div>
     )
