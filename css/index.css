@@ -19,19 +19,6 @@
   justify-content: space-around;
   margin: 0 5%; }
 
-.login {
-  width: 35vw;
-  height: 20vw;
-  font-size: 2em;
-  padding: 20px 10px;
-  margin-top: 20px;
-  background: #b8bacb;
-  border-radius: 40px;
-  border-bottom: 4px solid #f3f3f6;
-  display: inline-block; }
-  .login:active {
-    border-bottom: none; }
-
 .navbar {
   border-bottom: 1px solid black;
   display: inline-flex;
@@ -42,21 +29,6 @@
 .navbar ul {
   margin: 0 auto;
   height: auto; }
-
-.navbar li {
-  /*
-  display: inline-block;
-  padding: 15px 30px;
-  height: 20%;
-  text-align: center;
-  background: $login-background;
-  border-radius: 10px;
-  border-bottom: 4px solid lighten($login-background, $lighter);
-  &:active {
-    border-bottom: none;
-  }
-  border: $black-border;
-  */ }
 
 .rightNav {
   display: flex;
@@ -142,8 +114,6 @@ body {
   border-radius: 10px;
   border-bottom: 4px solid #f3f3f6;
   display: inline-block; }
-  .login:active, .logout:active {
-    border-bottom: none; }
 
 .navbar {
   border-bottom: 1px solid #ddd;
@@ -198,9 +168,6 @@ body {
   border-radius: 5%;
   font-size: 30px;
   max-width: 300px; }
-
-.login:active {
-  border-bottom: none; }
 
 .upcoming-lesson-list,
 .completed-lesson-list {
