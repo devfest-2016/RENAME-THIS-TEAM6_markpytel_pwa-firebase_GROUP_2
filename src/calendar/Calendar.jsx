@@ -46,8 +46,9 @@ const Calendar = React.createClass({
     let events = []
     let date = 20;
     for (let lessonName in lessons) {
-      let startDigit = parseInt(lessons[lessonName].lessonTime.split('')[0])
+      let startDigit = parseInt(lessons[lessonName].lessonTime.split(':')[0])
       let endDigit = startDigit + 1
+      let amOrPm = lessons[lessonName].lessonTime.split(':')[1].split('')[2] + lessons[lessonName].lessonTime.split(':')[1].split('')[3]
       let lesson = {
         'allDay': false,
         'title': lessons[lessonName].studentName,
