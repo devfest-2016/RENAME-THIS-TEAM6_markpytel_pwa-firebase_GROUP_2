@@ -3,6 +3,8 @@ import {Link} from 'react-router'
 import firebase from 'firebase';
 import { connect } from 'react-redux';
 
+import Calendar from '../calendar/Calendar';
+
 import CalendarService from '../services/CalendarService';
 
 const StudentDash = React.createClass({
@@ -21,7 +23,7 @@ const StudentDash = React.createClass({
           <div className="notification-bar"></div>
           <div className="current-lessons"></div>
           <div className="container calendar-container">
-            Calendar Here
+            <Calendar />
           </div>
           <div className="container calendar-container">
             Calendar Here
