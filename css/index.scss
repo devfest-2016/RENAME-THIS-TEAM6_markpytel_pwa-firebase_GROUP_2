@@ -123,10 +123,8 @@ li.student:not(first-of-type) {
 }
 
 .logo {
-  width: 10%;
-  height: auto;
-  text-align: center;
-  display: inline-block;
+  height: 100px;
+  margin: 10px;
 }
 
 .logo img {
@@ -654,7 +652,7 @@ button.rbc-input::-moz-focus-inner {
 
 .rbc-time-content > .rbc-time-gutter {
   -ms-flex: none;
-  flex: none; } 
+  flex: none; }
 
 .rbc-time-content > * + * > * {
   border-left: 1px solid #DDD; }
